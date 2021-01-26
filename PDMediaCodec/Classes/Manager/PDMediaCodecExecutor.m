@@ -79,7 +79,7 @@
 - (BOOL)prepareRunningContextWithError:(NSError **)error {
     if (![[NSFileManager defaultManager] fileExistsAtPath:_request.srcURL.path]) {
         *error = PDErrorWithDomain(PDCodecErrorDomain, PDInvalidArgumentErrorCode,
-                                     @"Can not found local file for request `%@`!", self.request);
+                                   @"Can not found local file for request `%@`!", self.request);
         return NO;
     }
     
@@ -88,7 +88,7 @@
     if (dstExist && !isDir) {
         if (![[NSFileManager defaultManager] removeItemAtPath:_request.dstURL.path error:nil]) {
             *error = PDErrorWithDomain(PDCodecErrorDomain, PDRemoveFileFailedErrorCode,
-                                         @"Remove file failed for request `%@`!", self.request);
+                                       @"Remove file failed for request `%@`!", self.request);
             return NO;
         }
     }
@@ -98,7 +98,7 @@
     if (!dirExist || !isDir) {
         if (![[NSFileManager defaultManager] createDirectoryAtPath:dirPath withIntermediateDirectories:YES attributes:nil error:nil]) {
             *error = PDErrorWithDomain(PDCodecErrorDomain, PDCreateDirFailedErrorCode,
-                                         @"Create dir path failed for request `%@`!", self.request);
+                                       @"Create dir path failed for request `%@`!", self.request);
             return NO;
         }
     }
@@ -168,10 +168,10 @@
             // Fix video size
             CGAffineTransform transform = assetVideoTrack.preferredTransform;
             NSMutableDictionary *videoSettings = [self.request.videoCodecAttr.writeOutputSettings mutableCopy];
-
+            
             if ([videoSettings[AVVideoWidthKey] integerValue] == (NSInteger)PDVideoCodecVideoAutoFixWidthValue ||
                 [videoSettings[AVVideoHeightKey] integerValue] == (NSInteger)PDVideoCodecVideoAutoFixHeightValue) {
-
+                
                 CMFormatDescriptionRef formatDescription = NULL;
                 // Grab the video format descriptions from the video track and grab the first one if it exists.
                 NSArray *videoFormatDescriptions = [assetVideoTrack formatDescriptions];
@@ -188,7 +188,7 @@
                 } else {
                     trackDimensions = [assetVideoTrack naturalSize];
                 }
-
+                
                 videoSettings[AVVideoWidthKey] = @(trackDimensions.width);
                 videoSettings[AVVideoHeightKey] = @(trackDimensions.height);
             }
@@ -304,7 +304,7 @@
                 [self.assetWriter cancelWriting];
                 
                 finalError = PDErrorWithDomain(PDCodecErrorDomain, PDCodecCancelledErrorCode,
-                                                 @"Codec media resource cancelled for request `%@`!", self.request);
+                                               @"Codec media resource cancelled for request `%@`!", self.request);
                 // Call the method to handle completion, and pass in the appropriate parameters to indicate whether reencoding was successful.
                 [self readingAndWritingDidFinishSuccessfully:finalSuccess withError:finalError];
                 return;
@@ -318,7 +318,7 @@
             
             if (!finalSuccess || finalError) {
                 finalError = PDErrorWithDomain(PDCodecErrorDomain, PDCodecFailedErrorCode,
-                                                 @"Codec video failed for request `%@`!", self.request);
+                                               @"Codec video failed for request `%@`!", self.request);
                 [self readingAndWritingDidFinishSuccessfully:finalSuccess withError:finalError];
                 return;
             }

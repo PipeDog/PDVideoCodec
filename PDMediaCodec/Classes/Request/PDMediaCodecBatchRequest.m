@@ -72,7 +72,7 @@
     
     if (!self.batchRequests.count) {
         NSError *error = PDErrorWithDomain(PDCodecErrorDomain, PDInvalidArgumentErrorCode,
-                                             @"You should set argument `batchRequest` before invoke `send` or `sendWithDoneHandler:` method!");
+                                           @"You should set argument `batchRequest` before invoke `send` or `sendWithDoneHandler:` method!");
         !doneHandler ?: doneHandler(NO, @{@0: error}, nil, nil);
         [[PDMediaCodecBatchRequestManager defaultManager] removeRequest:self];
         NSAssert(NO, @"You should set argument `batchRequest` before invoke `send` or `sendWithDoneHandler:` method!");
@@ -83,7 +83,7 @@
     NSMutableDictionary<NSNumber *, NSError *> *errorMap = [NSMutableDictionary dictionary];
     NSMutableDictionary<NSNumber *, PDMediaCodecRequest *> *successRequestMap = [NSMutableDictionary dictionary];
     NSMutableDictionary<NSNumber *, PDMediaCodecRequest *> *failedRequestMap = [NSMutableDictionary dictionary];
-
+    
     NSUInteger requestCount = self.batchRequests.count;
     for (NSInteger i = 0; i < requestCount; i++) {
         PDMediaCodecRequest *request = self.batchRequests[i];
@@ -97,7 +97,7 @@
             } else {
                 successRequestMap[@(i)] = request;
             }
-
+            
             dispatch_group_leave(group);
         }];
     }

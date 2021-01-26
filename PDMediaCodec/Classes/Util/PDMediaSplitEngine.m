@@ -19,7 +19,7 @@
     if (dstExist && !isDir) {
         if (![[NSFileManager defaultManager] removeItemAtPath:fileURL.path error:nil]) {
             *error = PDErrorWithDomain(PDCodecErrorDomain, PDRemoveFileFailedErrorCode,
-                                         @"Remove file failed!");
+                                       @"Remove file failed!");
             return NO;
         }
     }
@@ -33,7 +33,7 @@
     if (dstExist && !isDir) {
         if (![[NSFileManager defaultManager] removeItemAtPath:dirURL.path error:nil]) {
             *error = PDErrorWithDomain(PDCodecErrorDomain, PDRemoveFileFailedErrorCode,
-                                         @"Remove file failed!");
+                                       @"Remove file failed!");
             return NO;
         }
     }
@@ -43,7 +43,7 @@
     if (!dirExist || !isDir) {
         if (![[NSFileManager defaultManager] createDirectoryAtPath:dirPath withIntermediateDirectories:YES attributes:nil error:nil]) {
             *error = PDErrorWithDomain(PDCodecErrorDomain, PDCreateDirFailedErrorCode,
-                                         @"Create dir path failed!");
+                                       @"Create dir path failed!");
             return NO;
         }
     }
@@ -70,7 +70,7 @@
         PDDispatchOnMainQueue(^{
             NSAssert(NO, @"Unrecognized media type!");
             NSError *error = PDErrorWithDomain(PDCodecErrorDomain, PDUnrecognizedMediaTypeErrorCode,
-                                                 @"Unrecognized media type for srcURL `%@`!", srcURL);
+                                               @"Unrecognized media type for srcURL `%@`!", srcURL);
             !doneHandler ?: doneHandler(error, nil);
         });
         return;
@@ -79,7 +79,7 @@
     Float64 duration = CMTimeGetSeconds(asset.duration);
     if (duration <= sliceDuration) {
         NSError *error = PDErrorWithDomain(PDCodecErrorDomain, PDCodecCancelledErrorCode,
-                                             @"Small media file, send normal codec request!");
+                                           @"Small media file, send normal codec request!");
         !doneHandler ?: doneHandler(error, nil);
         return;
     }
@@ -124,7 +124,7 @@
             
             // [PDCodecDebugTool saveMediaToAlbumWithPath:dstURL.path];
         }
-
+        
         !doneHandler ?: doneHandler(outError, dstURLs);
     });
 }
@@ -134,7 +134,7 @@
                       doneHandler:(void (^)(NSError * _Nullable, NSURL * _Nonnull))doneHandler {
     if (!srcURLs.count) {
         NSError *error = PDErrorWithDomain(PDCodecErrorDomain, PDInvalidArgumentErrorCode,
-                                             @"Invalid argument `srcURLs`!");
+                                           @"Invalid argument `srcURLs`!");
         !doneHandler ?: doneHandler(error, dstURL);
         return;
     }
@@ -194,7 +194,7 @@
                 } break;
                 case AVAssetExportSessionStatusCancelled: {
                     NSError *cancelError = PDErrorWithDomain(PDCodecErrorDomain, PDCodecCancelledErrorCode,
-                                                               @"Cancel merge media resources!");
+                                                             @"Cancel merge media resources!");
                     !doneHandler ?: doneHandler(cancelError, dstURL);
                 } break;
                 case AVAssetExportSessionStatusFailed: default: {
@@ -234,7 +234,7 @@
         switch ([exportSession status]) {
             case AVAssetExportSessionStatusCancelled: {
                 NSError *error = PDErrorWithDomain(PDCodecErrorDomain, PDCodecCancelledErrorCode,
-                                                     @"Cancel split media at index `%zd`", index);
+                                                   @"Cancel split media at index `%zd`", index);
                 !doneHandler ?: doneHandler(NO, error, dstURL);
             } break;
             case AVAssetExportSessionStatusCompleted: {

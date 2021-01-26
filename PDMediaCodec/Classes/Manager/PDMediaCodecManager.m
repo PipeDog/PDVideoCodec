@@ -82,7 +82,7 @@ static PDMediaCodecManager *__defaultManager;
         Unlock();
         return;
     }
-
+    
     executor = [[PDMediaCodecExecutor alloc] initWithRequest:request];
     
     Lock();
@@ -106,7 +106,7 @@ static PDMediaCodecManager *__defaultManager;
     Lock();
     PDMediaCodecExecutor *executor = self.executorMap[request.requestID];
     if (executor) { [executor cancel]; }
-
+    
     [self.executingQueue removeRequest:request];
     [self.waitingQueue removeRequest:request];
     self.requestMap[request.requestID] = nil;
@@ -117,14 +117,14 @@ static PDMediaCodecManager *__defaultManager;
 #pragma mark - Tool Methods
 - (void)executeCodecByExecutor:(PDMediaCodecExecutor *)executor forRequest:(PDMediaCodecRequest *)request {
     NSLog(@"[Codec][RealCodec-Start] srcURL = %@", request.srcURL);
-
+    
     __weak typeof(self) weakSelf = self;
     [executor executeWithDoneHandler:^(BOOL success, NSError * _Nullable error) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         if (!strongSelf) { return; }
         
         NSLog(@"[Codec][RealCodec-End] srcURL = %@", request.srcURL);
-
+        
         Lock();
         [strongSelf.executingQueue removeRequest:request];
         strongSelf.requestMap[request.requestID] = nil;

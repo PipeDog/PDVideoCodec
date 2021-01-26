@@ -175,7 +175,7 @@
                 // [PDCodecDebugTool saveMediaToAlbumWithPath:request.dstURL.path];
             }
         }
-                
+        
         [self mergeMediaResourcesWithSrcURLs:srcURLs];
     }];
 }
