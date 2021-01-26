@@ -7,9 +7,7 @@
 //
 
 #import "PDViewController.h"
-#import <PDMediaCodecRequest+Build.h>
-#import <PDMediaCodecSliceRequest.h>
-#import <PDMediaCodecBatchRequest.h>
+#import <PDMediaCodec.h>
 
 @interface PDViewController ()
 

@@ -16,6 +16,7 @@
 #import "PDMediaCodecExecutor.h"
 #import "PDMediaCodecManager.h"
 #import "PDMediaCodecQueue.h"
+#import "PDMediaCodec.h"
 #import "PDMediaCodecBatchRequest.h"
 #import "PDMediaCodecRequest+Build.h"
 #import "PDMediaCodecRequest.h"
