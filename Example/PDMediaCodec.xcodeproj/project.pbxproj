@@ -59,13 +59,13 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6B4A4590C9ECAFC1219C2AF3 /* Pods-PDMediaCodec_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDMediaCodec_Example.release.xcconfig"; path = "Target Support Files/Pods-PDMediaCodec_Example/Pods-PDMediaCodec_Example.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7D4F20C08B0F4DA066F6A9F6 /* PDMediaCodec.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = PDMediaCodec.podspec; path = ../PDMediaCodec.podspec; sourceTree = "<group>"; };
+		7D4F20C08B0F4DA066F6A9F6 /* PDMediaCodec.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PDMediaCodec.podspec; path = ../PDMediaCodec.podspec; sourceTree = "<group>"; };
 		855F94232EC9F19A043A5178 /* Pods-PDMediaCodec_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDMediaCodec_Example.debug.xcconfig"; path = "Target Support Files/Pods-PDMediaCodec_Example/Pods-PDMediaCodec_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9114AFF7A3164E436D1EB6E4 /* Pods_PDMediaCodec_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PDMediaCodec_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF0F4422E9FCAE2976FD4F1 /* Pods_PDMediaCodec_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PDMediaCodec_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB973A4463DCBE0CF2FF6353 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		F89D0396116073835FCFC787 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		DB973A4463DCBE0CF2FF6353 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F89D0396116073835FCFC787 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F8FEFFB6A1971FA8CABE184D /* Pods-PDMediaCodec_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDMediaCodec_Tests.release.xcconfig"; path = "Target Support Files/Pods-PDMediaCodec_Tests/Pods-PDMediaCodec_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +103,6 @@
 				4779D4698464DCE82B8C9348 /* Pods-PDMediaCodec_Tests.debug.xcconfig */,
 				F8FEFFB6A1971FA8CABE184D /* Pods-PDMediaCodec_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -248,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = liang;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = N5ZNVTYNY8;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -494,6 +497,7 @@
 			baseConfigurationReference = 855F94232EC9F19A043A5178 /* Pods-PDMediaCodec_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N5ZNVTYNY8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PDMediaCodec/PDMediaCodec-Prefix.pch";
 				INFOPLIST_FILE = "PDMediaCodec/PDMediaCodec-Info.plist";
@@ -510,6 +514,7 @@
 			baseConfigurationReference = 6B4A4590C9ECAFC1219C2AF3 /* Pods-PDMediaCodec_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N5ZNVTYNY8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PDMediaCodec/PDMediaCodec-Prefix.pch";
 				INFOPLIST_FILE = "PDMediaCodec/PDMediaCodec-Info.plist";

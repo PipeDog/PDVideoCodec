@@ -7,6 +7,9 @@
 //
 
 #import "PDViewController.h"
+#import <PDMediaCodecRequest+Build.h>
+#import <PDMediaCodecSliceRequest.h>
+#import <PDMediaCodecBatchRequest.h>
 
 @interface PDViewController ()
 
@@ -14,16 +17,44 @@
 
 @implementation PDViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)normalCodec {
+    [[PDMediaCodecRequest requestWithBuilder:^(id<PDMediaCodecRequestBuilder>  _Nonnull builder) {
+        builder.srcURL = [NSURL URLWithString:@""];
+        builder.dstURL = [NSURL URLWithString:@""];
+    }] sendWithDoneHandler:^(BOOL success, NSError * _Nullable error) {
+        if (!success || error) {
+            return;
+        }
+        
+        // codec success...
+    }];
+}
+
+- (void)batchCodec {
+    [[PDMediaCodecBatchRequest requestWithBuilder:^(id<PDMediaCodecBatchRequestBuilder>  _Nonnull builder) {
+        builder.batchRequests = @[
+            // xxx
+        ];
+    }] sendWithDoneHandler:^(BOOL success,
+                             NEMediaCodecErrorMap  _Nullable errorMap,
+                             PDMediaCodecRequestMap  _Nullable successRequestMap,
+                             PDMediaCodecRequestMap  _Nullable failedRequestMap) {
+        // TODO: codec finished...
+    }];
+}
+
+- (void)sliceCodec {
+    [[PDMediaCodecSliceRequest requestWithBuilder:^(id<PDMediaCodecRequestBuilder>  _Nonnull builder) {
+        builder.srcURL = [NSURL URLWithString:@""];
+        builder.dstURL = [NSURL URLWithString:@""];
+    }] sendWithDoneHandler:^(BOOL success, NSError * _Nullable error) {
+        // TODO: codec finished...
+    }];
 }
 
 @end

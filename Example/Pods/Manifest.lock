@@ -1,0 +1,16 @@
+PODS:
+  - PDMediaCodec (0.1.0)
+
+DEPENDENCIES:
+  - PDMediaCodec (from `../`)
+
+EXTERNAL SOURCES:
+  PDMediaCodec:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PDMediaCodec: 97d1a21ed85450bdd5d9b6bad68abe14833d3524
+
+PODFILE CHECKSUM: 800bd08c40df07971c50646160c3f16b1671f592
+
+COCOAPODS: 1.9.3
