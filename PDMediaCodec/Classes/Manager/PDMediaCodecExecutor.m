@@ -303,6 +303,10 @@
                 [self.assetReader cancelReading];
                 [self.assetWriter cancelWriting];
                 
+                if ([[NSFileManager defaultManager] fileExistsAtPath:self.request.dstURL.path]) {
+                    [[NSFileManager defaultManager] removeItemAtPath:self.request.dstURL.path error:nil];
+                }
+                
                 finalError = PDErrorWithDomain(PDCodecErrorDomain, PDCodecCancelledErrorCode,
                                                @"Codec media resource cancelled for request `%@`!", self.request);
                 // Call the method to handle completion, and pass in the appropriate parameters to indicate whether reencoding was successful.
@@ -380,10 +384,6 @@
                 // Leave the dispatch group, since the video work is finished now.
                 dispatch_group_leave(self.dispatchGroup);
             });
-        }
-        
-        if ([[NSFileManager defaultManager] fileExistsAtPath:self.request.dstURL.path]) {
-            [[NSFileManager defaultManager] removeItemAtPath:self.request.dstURL.path error:nil];
         }
         
         // Set the cancelled Boolean property to YES to cancel any work on the main queue as well.
