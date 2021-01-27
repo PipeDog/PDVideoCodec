@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (PDMediaCodecRequest * _Nullable)popHeadRequest;
 - (void)removeAllRequests;
 - (NSUInteger)count;
+- (NSArray<PDMediaCodecRequest *> *)allRequests;
 
 @end
 

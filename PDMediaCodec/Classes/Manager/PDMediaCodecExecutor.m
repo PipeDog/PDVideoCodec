@@ -13,6 +13,10 @@
 #import "PDMediaCodecError.h"
 #import "PDMediaCodecUtil.h"
 
+static inline BOOL PDFloatEqualToFloat(CGFloat f1, CGFloat f2) {
+    return fabs(f1 - f2) < 0.01f;
+}
+
 @interface PDMediaCodecExecutor ()
 
 @property (nonatomic, copy) void (^doneHandler)(BOOL success, NSError * _Nullable error);
@@ -189,8 +193,22 @@
                     trackDimensions = [assetVideoTrack naturalSize];
                 }
                 
-                videoSettings[AVVideoWidthKey] = @(trackDimensions.width);
-                videoSettings[AVVideoHeightKey] = @(trackDimensions.height);
+                if (PDFloatEqualToFloat(trackDimensions.width / trackDimensions.height, 4.f / 3.f)) {
+                    videoSettings[AVVideoWidthKey] = @(640.f);
+                    videoSettings[AVVideoHeightKey] = @(480.f);
+                } else if (PDFloatEqualToFloat(trackDimensions.width / trackDimensions.height, 3.f / 4.f)) {
+                    videoSettings[AVVideoWidthKey] = @(480.f);
+                    videoSettings[AVVideoHeightKey] = @(640.f);
+                } else if (PDFloatEqualToFloat(trackDimensions.width / trackDimensions.height, 16.f / 9.f)) {
+                    videoSettings[AVVideoWidthKey] = @(960.f);
+                    videoSettings[AVVideoHeightKey] = @(540.f);
+                } else if (PDFloatEqualToFloat(trackDimensions.width / trackDimensions.height, 9.f / 16.f)) {
+                    videoSettings[AVVideoWidthKey] = @(540.f);
+                    videoSettings[AVVideoHeightKey] = @(960.f);
+                } else {
+                    videoSettings[AVVideoWidthKey] = @(trackDimensions.width);
+                    videoSettings[AVVideoHeightKey] = @(trackDimensions.height);
+                }
             }
             
             self.assetWriterVideoInput = [AVAssetWriterInput assetWriterInputWithMediaType:[assetVideoTrack mediaType] outputSettings:videoSettings];
@@ -307,6 +325,7 @@
                     [[NSFileManager defaultManager] removeItemAtPath:self.request.dstURL.path error:nil];
                 }
                 
+                finalSuccess = NO;
                 finalError = PDErrorWithDomain(PDCodecErrorDomain, PDCodecCancelledErrorCode,
                                                @"Codec media resource cancelled for request `%@`!", self.request);
                 // Call the method to handle completion, and pass in the appropriate parameters to indicate whether reencoding was successful.

@@ -52,4 +52,8 @@
     return count;
 }
 
+- (NSArray<PDMediaCodecRequest *> *)allRequests {
+    return [_requests copy];
+}
+
 @end

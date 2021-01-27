@@ -48,6 +48,10 @@ static PDMediaCodecManager *__defaultManager;
     return __defaultManager;
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {
@@ -58,8 +62,20 @@ static PDMediaCodecManager *__defaultManager;
         _executingQueue = [[PDMediaCodecQueue alloc] initWithName:@"com.codec-queue.executing"];
         _waitingQueue = [[PDMediaCodecQueue alloc] initWithName:@"com.codec-queue.waiting"];
         _commitQueue = dispatch_queue_create("com.codec-commit.queue", DISPATCH_QUEUE_SERIAL);
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
     }
     return self;
+}
+
+- (void)applicationWillResignActive:(NSNotification *)notification {
+    Lock();
+    NSArray<PDMediaCodecRequest *> *allRequests = [self.requestMap.allValues copy];
+    Unlock();
+    
+    for (PDMediaCodecRequest *request in allRequests) {
+        [request cancel];
+    }
 }
 
 - (void)addRequest:(PDMediaCodecRequest *)request {
