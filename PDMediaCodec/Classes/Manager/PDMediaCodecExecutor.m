@@ -51,15 +51,15 @@ static inline BOOL PDFloatEqualToFloat(CGFloat f1, CGFloat f2) {
         _request = request;
         
         // Create the main serialization queue.
-        NSString *serializationQueueDescription = [NSString stringWithFormat:@"%@ serialization queue", _request.requestID];
+        NSString *serializationQueueDescription = [NSString stringWithFormat:@"com.codec-commit.queue[%@]", _request.requestID];
         self.mainSerializationQueue = dispatch_queue_create([serializationQueueDescription UTF8String], DISPATCH_QUEUE_SERIAL);
         
         // Create the serialization queue to use for reading and writing the audio data.
-        NSString *rwAudioSerializationQueueDescription = [NSString stringWithFormat:@"%@ rw audio serialization queue",  _request.requestID];
+        NSString *rwAudioSerializationQueueDescription = [NSString stringWithFormat:@"com.codec-audio.queue[%@]",  _request.requestID];
         self.rwAudioSerializationQueue = dispatch_queue_create([rwAudioSerializationQueueDescription UTF8String], DISPATCH_QUEUE_SERIAL);
         
         // Create the serialization queue to use for reading and writing the video data.
-        NSString *rwVideoSerializationQueueDescription = [NSString stringWithFormat:@"%@ rw video serialization queue",  _request.requestID];
+        NSString *rwVideoSerializationQueueDescription = [NSString stringWithFormat:@"com.codec-video.queue[%@]",  _request.requestID];
         self.rwVideoSerializationQueue = dispatch_queue_create([rwVideoSerializationQueueDescription UTF8String], DISPATCH_QUEUE_SERIAL);
     }
     return self;
@@ -76,7 +76,7 @@ static inline BOOL PDFloatEqualToFloat(CGFloat f1, CGFloat f2) {
         return;
     }
     
-    [self setupInitializeConfiguration];
+    [self setupConfigurationThenStartRunning];
 }
 
 #pragma mark - Tool Methods
@@ -110,7 +110,7 @@ static inline BOOL PDFloatEqualToFloat(CGFloat f1, CGFloat f2) {
     return YES;
 }
 
-- (void)setupInitializeConfiguration {
+- (void)setupConfigurationThenStartRunning {
     self.asset = [AVAsset assetWithURL:_request.srcURL];
     self.cancelled = NO;
     self.outputURL = _request.dstURL;
@@ -336,12 +336,9 @@ static inline BOOL PDFloatEqualToFloat(CGFloat f1, CGFloat f2) {
             // If cancellation didn't occur, first make sure that the asset reader didn't fail.
             if ([self.assetReader status] == AVAssetReaderStatusFailed) {
                 finalSuccess = NO;
-                finalError = [self.assetReader error];
-            }
-            
-            if (!finalSuccess || finalError) {
-                finalError = PDErrorWithDomain(PDCodecErrorDomain, PDCodecFailedErrorCode,
-                                               @"Codec video failed for request `%@`!", self.request);
+                finalError = ([self.assetReader error] ?:
+                              PDErrorWithDomain(PDCodecErrorDomain, PDCodecFailedErrorCode,
+                                                @"Codec video failed for request `%@`!", self.request));
                 [self readingAndWritingDidFinishSuccessfully:finalSuccess withError:finalError];
                 return;
             }

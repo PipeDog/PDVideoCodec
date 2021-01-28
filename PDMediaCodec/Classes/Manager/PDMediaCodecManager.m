@@ -146,15 +146,10 @@ static PDMediaCodecManager *__defaultManager;
         strongSelf.requestMap[request.requestID] = nil;
         strongSelf.executorMap[request.requestID] = nil;
         
-        NSInteger waitingQueueCount = strongSelf.waitingQueue.count;
-        Unlock();
-        
-        if (!waitingQueueCount) { return; }
-        
-        Lock();
         PDMediaCodecRequest *nextRequest = strongSelf.waitingQueue.popHeadRequest;
         Unlock();
         
+        if (!nextRequest) { return; }
         [strongSelf addRequest:nextRequest];
     }];
 }
