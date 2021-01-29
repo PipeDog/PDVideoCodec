@@ -67,7 +67,6 @@
 + (dispatch_queue_t)splitQueueForRequest:(PDMediaCodecRequest *)request {
     static NSArray<dispatch_queue_t> *__splitQueues;
     static NSUInteger __splitQueueCount;
-    static NSUInteger counter = 0;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         __splitQueues = @[
@@ -77,14 +76,13 @@
         ];
         __splitQueueCount = [__splitQueues count];
     });
-    return __splitQueues[counter++ % __splitQueueCount];
+    return __splitQueues[[request.requestID integerValue] % __splitQueueCount];
 }
 
 + (dispatch_queue_t)mergeQueueForRequest:(PDMediaCodecRequest *)request {
     static NSArray<dispatch_queue_t> *__mergeQueues;
     static NSUInteger __mergeQueueCount;
     static dispatch_once_t onceToken;
-    static NSUInteger counter = 0;
     dispatch_once(&onceToken, ^{
         __mergeQueues = @[
             dispatch_queue_create("com.media-merge.queue[0]", DISPATCH_QUEUE_SERIAL),
@@ -93,7 +91,7 @@
         ];
         __mergeQueueCount = [__mergeQueues count];
     });
-    return __mergeQueues[counter++ % __mergeQueueCount];
+    return __mergeQueues[[request.requestID integerValue] % __mergeQueueCount];
 }
 
 #pragma mark - Override Methods
