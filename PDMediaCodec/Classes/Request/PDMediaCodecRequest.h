@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVMediaFormat.h>
 #import <PDVideoCodecAttr.h>
 #import <PDAudioCodecAttr.h>
 
@@ -17,6 +18,7 @@ typedef NSString * PDMediaCodecRequestID;
 
 @property (nonatomic, strong) NSURL *srcURL;
 @property (nonatomic, strong) NSURL *dstURL;
+@property (nonatomic, strong) AVFileType outputFileType;
 @property (nonatomic, strong) PDVideoCodecAttr *videoCodecAttr;
 @property (nonatomic, strong) PDAudioCodecAttr *audioCodecAttr;
 @property (nonatomic, copy, nullable) void (^doneHandler)(BOOL success, NSError * _Nullable error);

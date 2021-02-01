@@ -12,9 +12,20 @@
 
 @synthesize srcURL = _srcURL;
 @synthesize dstURL = _dstURL;
+@synthesize outputFileType = _outputFileType;
 @synthesize videoCodecAttr = _videoCodecAttr;
 @synthesize audioCodecAttr = _audioCodecAttr;
 @synthesize doneHandler = _doneHandler;
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _outputFileType = AVFileTypeMPEG4;
+        _videoCodecAttr = [PDVideoCodecAttr defaultCodecAttr];
+        _audioCodecAttr = [PDAudioCodecAttr defaultCodecAttr];
+    }
+    return self;
+}
 
 - (instancetype)send {
     return [self sendWithDoneHandler:nil];

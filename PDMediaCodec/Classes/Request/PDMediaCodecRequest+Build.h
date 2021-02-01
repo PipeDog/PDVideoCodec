@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSURL *srcURL;
 @property (nonatomic, strong) NSURL *dstURL;
+@property (nonatomic, strong) AVFileType outputFileType;
 @property (nonatomic, strong) PDVideoCodecAttr *videoCodecAttr;
 @property (nonatomic, strong) PDAudioCodecAttr *audioCodecAttr;
 

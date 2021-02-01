@@ -133,7 +133,7 @@ static inline BOOL PDFloatEqualToFloat(CGFloat f1, CGFloat f2) {
     BOOL success = (self.assetReader != nil);
     if (success) {
         // If the asset reader was successfully initialized, do the same for the asset writer.
-        self.assetWriter = [[AVAssetWriter alloc] initWithURL:self.outputURL fileType:AVFileTypeMPEG4 error:outError];
+        self.assetWriter = [[AVAssetWriter alloc] initWithURL:self.outputURL fileType:self.request.outputFileType error:outError];
         success = (self.assetWriter != nil);
     }
     
@@ -311,6 +311,7 @@ static inline BOOL PDFloatEqualToFloat(CGFloat f1, CGFloat f2) {
                 }
             }];
         }
+        
         // Set up the notification that the dispatch group will send when the audio and video work have both finished.
         dispatch_group_notify(self.dispatchGroup, self.mainSerializationQueue, ^{
             __block BOOL finalSuccess = YES;
