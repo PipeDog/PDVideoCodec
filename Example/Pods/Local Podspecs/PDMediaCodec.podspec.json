@@ -9,7 +9,7 @@
     "file": "LICENSE"
   },
   "authors": {
-    "liang": "leiliang4@xdf.cn"
+    "liang": "leiliang0128@163.com"
   },
   "source": {
     "git": "https://github.com/liang/PDMediaCodec.git",
@@ -18,5 +18,6 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "PDMediaCodec/Classes/**/*"
+  "source_files": "PDMediaCodec/Classes/**/*",
+  "vendored_libraries": "PDMediaCodec/Classes/**/**/*.a"
 }
