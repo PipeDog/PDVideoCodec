@@ -81,13 +81,22 @@ static inline BOOL PDFloatEqualToFloat(CGFloat f1, CGFloat f2) {
 
 #pragma mark - Tool Methods
 - (BOOL)prepareRunningContextWithError:(NSError **)error {
-    if (![[NSFileManager defaultManager] fileExistsAtPath:_request.srcURL.path]) {
+    BOOL isDir = NO;
+    BOOL srcExist = [[NSFileManager defaultManager] fileExistsAtPath:_request.srcURL.path isDirectory:&isDir];
+    if (!srcExist || isDir) {
         *error = PDErrorWithDomain(PDCodecErrorDomain, PDInvalidArgumentErrorCode,
                                    @"Can not found local file for request `%@`!", self.request);
         return NO;
     }
     
-    BOOL isDir = NO;
+    unsigned long long fileSize = [[NSFileManager defaultManager] attributesOfItemAtPath:_request.srcURL.path error:nil].fileSize;
+    if (!fileSize) {
+        *error = PDErrorWithDomain(PDCodecErrorDomain, PDInvalidArgumentErrorCode,
+                                   @"Src file size is invalid for request `%@`!", self.request);
+        return NO;
+    }
+    
+    isDir = NO;
     BOOL dstExist = [[NSFileManager defaultManager] fileExistsAtPath:_request.dstURL.path isDirectory:&isDir];
     if (dstExist && !isDir) {
         if (![[NSFileManager defaultManager] removeItemAtPath:_request.dstURL.path error:nil]) {
@@ -264,7 +273,7 @@ static inline BOOL PDFloatEqualToFloat(CGFloat f1, CGFloat f2) {
                         completedOrFailed = YES;
                     }
                 }
-                if (completedOrFailed) {
+                if (completedOrFailed && !self.audioFinished) {
                     // Mark the input as finished, but only if we haven't already done so, and then leave the dispatch group (since the audio work has finished).
                     BOOL oldFinished = self.audioFinished;
                     self.audioFinished = YES;
@@ -300,7 +309,7 @@ static inline BOOL PDFloatEqualToFloat(CGFloat f1, CGFloat f2) {
                         completedOrFailed = YES;
                     }
                 }
-                if (completedOrFailed) {
+                if (completedOrFailed && !self.videoFinished) {
                     // Mark the input as finished, but only if we haven't already done so, and then leave the dispatch group (since the video work has finished).
                     BOOL oldFinished = self.videoFinished;
                     self.videoFinished = YES;
@@ -374,10 +383,10 @@ static inline BOOL PDFloatEqualToFloat(CGFloat f1, CGFloat f2) {
 - (void)cancel {
     // Handle cancellation asynchronously, but serialize it with the main queue.
     dispatch_async(self.mainSerializationQueue, ^{
-        // If we had audio data to reencode, we need to cancel the audio work.
-        if (self.assetWriterAudioInput) {
-            // Handle cancellation asynchronously again, but this time serialize it with the audio queue.
-            dispatch_async(self.rwAudioSerializationQueue, ^{
+        // Handle cancellation asynchronously again, but this time serialize it with the audio queue.
+        dispatch_async(self.rwAudioSerializationQueue, ^{
+            // If we had audio data to reencode, we need to cancel the audio work.
+            if (self.assetWriterAudioInput && !self.audioFinished) {
                 // Update the Boolean property indicating the task is complete and mark the input as finished if it hasn't already been marked as such.
                 BOOL oldFinished = self.audioFinished;
                 self.audioFinished = YES;
@@ -386,12 +395,12 @@ static inline BOOL PDFloatEqualToFloat(CGFloat f1, CGFloat f2) {
                 }
                 // Leave the dispatch group since the audio work is finished now.
                 dispatch_group_leave(self.dispatchGroup);
-            });
-        }
+            }
+        });
         
-        if (self.assetWriterVideoInput) {
-            // Handle cancellation asynchronously again, but this time serialize it with the video queue.
-            dispatch_async(self.rwVideoSerializationQueue, ^{
+        // Handle cancellation asynchronously again, but this time serialize it with the video queue.
+        dispatch_async(self.rwVideoSerializationQueue, ^{
+            if (self.assetWriterVideoInput && !self.videoFinished) {
                 // Update the Boolean property indicating the task is complete and mark the input as finished if it hasn't already been marked as such.
                 BOOL oldFinished = self.videoFinished;
                 self.videoFinished = YES;
@@ -400,8 +409,8 @@ static inline BOOL PDFloatEqualToFloat(CGFloat f1, CGFloat f2) {
                 }
                 // Leave the dispatch group, since the video work is finished now.
                 dispatch_group_leave(self.dispatchGroup);
-            });
-        }
+            }
+        });
         
         // Set the cancelled Boolean property to YES to cancel any work on the main queue as well.
         self.cancelled = YES;
