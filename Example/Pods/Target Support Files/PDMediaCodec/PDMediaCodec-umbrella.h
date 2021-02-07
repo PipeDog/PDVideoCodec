@@ -17,10 +17,13 @@
 #import "PDAudioCodecBatchRequest.h"
 #import "PDAudioCodecRequest+Build.h"
 #import "PDAudioCodecRequest.h"
+#import "PDCodecUUID.h"
+#import "PDMediaCodecError.h"
+#import "PDMediaCodecUtil.h"
+#import "PDCodecDebugTool.h"
 #import "PDMediaCodec.h"
 #import "PDAudioCodecAttr.h"
 #import "PDVideoCodecAttr.h"
-#import "PDCodecDebugTool.h"
 #import "PDMediaCodecExecutor.h"
 #import "PDMediaCodecManager.h"
 #import "PDMediaCodecQueue.h"
@@ -28,8 +31,6 @@
 #import "PDMediaCodecRequest+Build.h"
 #import "PDMediaCodecRequest.h"
 #import "PDMediaCodecSliceRequest.h"
-#import "PDMediaCodecError.h"
-#import "PDMediaCodecUtil.h"
 #import "PDMediaSplitEngine.h"
 
 FOUNDATION_EXPORT double PDMediaCodecVersionNumber;

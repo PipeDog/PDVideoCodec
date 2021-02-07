@@ -8,6 +8,7 @@
 #import "PDAudioCodecBatchRequest.h"
 #import "PDAudioCodecRequest.h"
 #import "PDMediaCodecError.h"
+#import "PDCodecUUID.h"
 
 @interface PDAudioCodecBatchRequestManager : NSObject
 
@@ -50,7 +51,9 @@
 
 @end
 
-@implementation PDAudioCodecBatchRequest
+@implementation PDAudioCodecBatchRequest {
+    PDAudioCodecRequestID _requestID;
+}
 
 + (instancetype)requestWithBuilder:(void (^)(id<PDAudioCodecBatchRequestBuilder> _Nonnull))block {
     PDAudioCodecBatchRequest *request = [[PDAudioCodecBatchRequest alloc] init];
@@ -122,8 +125,10 @@
 }
 
 - (PDAudioCodecRequestID)requestID {
-    PDAudioCodecRequestID requestID = [NSString stringWithFormat:@"%lu", (unsigned long)[self hash]];
-    return requestID;
+    if (!_requestID) {
+        _requestID = [PDCodecUUID UUID].UUIDString;
+    }
+    return _requestID;
 }
 
 @end

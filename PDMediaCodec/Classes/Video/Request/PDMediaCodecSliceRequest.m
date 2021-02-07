@@ -11,7 +11,6 @@
 #import "PDMediaCodecRequest+Build.h"
 #import "PDMediaCodecUtil.h"
 #import "PDMediaCodecError.h"
-#import "PDCodecDebugTool.h"
 
 @interface PDMediaCodecSliceRequestManager : NSObject
 
@@ -170,7 +169,6 @@
             PDMediaCodecRequest *request = successRequestMap[@(i)];
             if (request.dstURL) {
                 [srcURLs addObject:request.dstURL];
-                // [PDCodecDebugTool saveMediaToAlbumWithPath:request.dstURL.path];
             }
         }
         

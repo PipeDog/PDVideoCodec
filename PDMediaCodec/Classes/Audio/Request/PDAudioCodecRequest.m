@@ -7,6 +7,7 @@
 
 #import "PDAudioCodecRequest.h"
 #import "PDAudioCodecManager.h"
+#import "PDCodecUUID.h"
 
 NEAudioFileType const NEAudioFileTypeMP3 = @"mp3";
 NEAudioFileType const NEAudioFileTypeWAV = @"wav";
@@ -46,7 +47,7 @@ NEAudioFileType const NEAudioFileTypeM4A = @"m4a";
 
 - (PDAudioCodecRequestID)requestID {
     if (!_requestID) {
-        _requestID = [NSString stringWithFormat:@"%lu", (unsigned long)[self hash]];
+        _requestID = [PDCodecUUID UUID].UUIDString;
     }
     return _requestID;
 }

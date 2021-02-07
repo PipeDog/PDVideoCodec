@@ -9,7 +9,6 @@
 #import <AVFoundation/AVFoundation.h>
 #import "PDMediaCodecError.h"
 #import "PDMediaCodecUtil.h"
-#import "PDCodecDebugTool.h"
 
 @implementation PDMediaSplitEngine
 
@@ -121,8 +120,6 @@
             if (dstURL) {
                 [dstURLs addObject:dstURL];
             }
-            
-            // [PDCodecDebugTool saveMediaToAlbumWithPath:dstURL.path];
         }
         
         !doneHandler ?: doneHandler(outError, dstURLs);

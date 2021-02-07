@@ -8,6 +8,7 @@
 #import "PDMediaCodecBatchRequest.h"
 #import "PDMediaCodecRequest.h"
 #import "PDMediaCodecError.h"
+#import "PDCodecUUID.h"
 
 @interface PDMediaCodecBatchRequestManager : NSObject
 
@@ -50,7 +51,9 @@
 
 @end
 
-@implementation PDMediaCodecBatchRequest
+@implementation PDMediaCodecBatchRequest {
+    PDMediaCodecRequestID _requestID;
+}
 
 + (instancetype)requestWithBuilder:(void (^)(id<PDMediaCodecBatchRequestBuilder> _Nonnull))block {
     PDMediaCodecBatchRequest *request = [[PDMediaCodecBatchRequest alloc] init];
@@ -122,8 +125,10 @@
 }
 
 - (PDMediaCodecRequestID)requestID {
-    PDMediaCodecRequestID requestID = [NSString stringWithFormat:@"%lu", (unsigned long)[self hash]];
-    return requestID;
+    if (!_requestID) {
+        _requestID = [PDCodecUUID UUID].UUIDString;
+    }
+    return _requestID;
 }
 
 @end

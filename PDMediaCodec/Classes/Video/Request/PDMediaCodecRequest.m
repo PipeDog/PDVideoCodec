@@ -7,8 +7,11 @@
 
 #import "PDMediaCodecRequest.h"
 #import "PDMediaCodecManager.h"
+#import "PDCodecUUID.h"
 
-@implementation PDMediaCodecRequest
+@implementation PDMediaCodecRequest {
+    PDMediaCodecRequestID _requestID;
+}
 
 @synthesize srcURL = _srcURL;
 @synthesize dstURL = _dstURL;
@@ -42,8 +45,10 @@
 }
 
 - (PDMediaCodecRequestID)requestID {
-    PDMediaCodecRequestID requestID = [NSString stringWithFormat:@"%lu", (unsigned long)[self hash]];
-    return requestID;
+    if (!_requestID) {
+        _requestID = [PDCodecUUID UUID].UUIDString;
+    }
+    return _requestID;
 }
 
 - (NSString *)description {
