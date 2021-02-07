@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class PDMediaCodecSliceRequest;
 
+/// @class PDMediaCodecSliceRequestManager
+/// @brief 视频切片转码管理器
 @interface PDMediaCodecSliceRequestManager : NSObject
 
 @property (class, strong, readonly) PDMediaCodecSliceRequestManager *defaultManager;
