@@ -7,69 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		038834094FA0EC77A794FBE9918981CB /* PDAudioCodecBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 590159A8F9278E5A562D83853C8C028C /* PDAudioCodecBatchRequest.m */; };
-		0C220A04258CBAFEA13B9B6BED2D8422 /* PDAudioCodecRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B395387DF9EC1329DAD2CB1F5AC96C34 /* PDAudioCodecRequest.m */; };
-		12215304F3DE23D1679EE5A19B1F4F2A /* libmp3lame.a in Sources */ = {isa = PBXBuildFile; fileRef = 88661261862BCF615ED105C0F40B73E9 /* libmp3lame.a */; };
-		1D8EA2B4502D22E7C82249118EE3A96D /* PDMediaCodec.h in Headers */ = {isa = PBXBuildFile; fileRef = B7D049232006D2C1D3E6BAACD48A94C2 /* PDMediaCodec.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1EBD7EFBF0575CD3A873D5F6AE88C78C /* PDAudioCodecOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4D3F925AFA152E4E8FBB564A8A6B98 /* PDAudioCodecOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02BC9BBECF54FF81FCCB300B0C9CF720 /* PDMediaCodecUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D94546E0ACA878CB4FD3A00CE5E7 /* PDMediaCodecUtil.m */; };
+		06E2DFFBA2155476B2728091A9C4AE17 /* PDAudioCodecAttr.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B958DAC93BA015A4BDC499A57EA422F /* PDAudioCodecAttr.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16FA65C2BD4EE22027518FED864EA150 /* PDCodecUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FBACAA51097C65E8A09C3F9A042340 /* PDCodecUUID.m */; };
+		1AE3EE0E32037E493CEC6DD0CC0FC121 /* PDAudioCodec2MP3Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1B5FDF200794D86E4A6484E8644A66 /* PDAudioCodec2MP3Operation.m */; };
+		1CF70657827EA4F97CAEC53B1F99DEDB /* PDMediaSplitEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 9291F671D723464700E2C8C88F4DB03F /* PDMediaSplitEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F8F1ACEB86229BA37D170068DBD7974 /* PDAudioCodecRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C1F68B3E29BD9CCC12374B97FABE239 /* PDAudioCodecRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		209756B9BB6E0E21245DBDF9B939B572 /* Pods-PDMediaCodec_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DFCC877BDF243F1917F5B5667FC44F26 /* Pods-PDMediaCodec_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23628F1798779174575458267C7596EC /* PDAudioCodecManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B392DDEF0061A2BC1772ABA1C7DA40F /* PDAudioCodecManager.m */; };
-		25D32859A6B49BB85925BF8439A4BB5E /* PDMediaCodecBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A6CC0B0566CD17F052A9E4A10180A /* PDMediaCodecBatchRequest.m */; };
-		26F4F0D41DF08429850803C0DC221B16 /* PDAudioCodecRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF737B4B7F3C734480C68ACA4AA04B5 /* PDAudioCodecRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2824363CF92A4625885C267D82E79BC6 /* PDAudioCodec2MP3Operation.h in Headers */ = {isa = PBXBuildFile; fileRef = 235D4E85A9D2F0680B9912456153B6D9 /* PDAudioCodec2MP3Operation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		299BBB5A9DEB4B071C813C97EC0D42D9 /* PDMediaCodecRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = F93676EC71A2BF8B07150EF1DE175B83 /* PDMediaCodecRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E21AA065FE66744DA2F9B5A0AEDBBC5 /* PDMediaCodecError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C6871C27593683E27B94F0CCFD093 /* PDMediaCodecError.m */; };
-		3AC2381F84D957B45375AC25FCB22C49 /* PDAudioCodecManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 601BEBB78C1A05F8020E9E76ADF57E5F /* PDAudioCodecManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3E0CC69E4CC6CCA0CA8A0F9C4935EB21 /* PDMediaCodecBatchRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 9225BBD80C8D06C341523706794D2401 /* PDMediaCodecBatchRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21DC9CE05944E02DA2C29F3A5E5094D0 /* PDMediaCodecError.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D3B1B3575AC1B0D1E6BD2F8E5F2DD3 /* PDMediaCodecError.m */; };
+		2B932412C82C39742AC0ADD4CAD82850 /* PDMediaCodecQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 943FC70C0FA16B9E72ABA8B2700282B9 /* PDMediaCodecQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		314E6459CC7102C6DD9ABA4252E40037 /* PDMediaCodecExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = 873398DEACD6CF9D0EFC46C758411FAE /* PDMediaCodecExecutor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31C8B4F5AB4D289EB521912CFC2F42C3 /* PDAudioCodecRequest+Build.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C595875B137788BECB11F3CA6ECBF1F /* PDAudioCodecRequest+Build.m */; };
+		3B838E094CEDF0B2D0E84475F963E46F /* PDMediaCodecBatchRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CA2DC5ECC577243863B3C438AAF793ED /* PDMediaCodecBatchRequestManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CE8EDC4C56CA57DEBBBB34F4F350CA6 /* PDAudioCodecAttr.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF0F29CA1FAD27CF8044887A0257E46 /* PDAudioCodecAttr.m */; };
 		3F86422F6E76B7F9C67801590FFC836B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		4595F12986A20C89514512AEC7D5E0F3 /* PDMediaCodec-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 717C48F768008144A6D63557D6D56086 /* PDMediaCodec-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		48FF63715A0949E1C4C23522FDA599C4 /* PDMediaCodecError.h in Headers */ = {isa = PBXBuildFile; fileRef = A31AF212D5121E14383C322765C068D7 /* PDMediaCodecError.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4977A5898E94BD068B48FCF01C591102 /* PDMediaCodecQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B6FDF0780A1CD1117050D9D88D1364E /* PDMediaCodecQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		429A45C1DA67A0A848E75DCBCD03B2EB /* PDMediaCodecManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2486F960D982DF281882CBF58F4819D /* PDMediaCodecManager.m */; };
+		49CCC6BE8D310791031A56ACC2A1F754 /* PDMediaCodecError.h in Headers */ = {isa = PBXBuildFile; fileRef = C68CD6E1186FBF0D26AB00C39A637C37 /* PDMediaCodecError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49F6D1B022CDD10D4911D0B7A44EA863 /* PDAudioCodecBatchRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5271FCC03C30FFC7D0960609722F5A8C /* PDAudioCodecBatchRequestManager.m */; };
+		4A975EF2AF73911590D692F2FCDB7D8E /* PDVideoCodecAttr.m in Sources */ = {isa = PBXBuildFile; fileRef = A4965E1AF51709C99D765520D7F84675 /* PDVideoCodecAttr.m */; };
 		4D20D0672ABEA22E4A48C68C27A4799C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		4D27C8CD082012A27FE99C22C6212BD3 /* PDMediaSplitEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 502C0850F8CD2C7CAE8AC95198E45F02 /* PDMediaSplitEngine.m */; };
-		51D7FFF38D21A7840E84884D27B50E70 /* PDCodecUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC9C7C4EB24FB5967A816E792C0F584 /* PDCodecUUID.m */; };
-		5A97DE30E85A775DE5094D447EF32DD0 /* PDCodecDebugTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 7114D60FB171876612F0AEEBBC365821 /* PDCodecDebugTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		68CB847912B696DD6D6F643BE148D76F /* PDAudioCodecAttr.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B644C9B5C42C44F8484E255A516E712 /* PDAudioCodecAttr.m */; };
-		6C067E23EA0D7CC87197ED746A61B3AC /* PDMediaCodecRequest+Build.h in Headers */ = {isa = PBXBuildFile; fileRef = 54AFD3431FC34A9D3EF72E8241F11CCB /* PDMediaCodecRequest+Build.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6C648544C4E3B87A8CB81A0A0B833A90 /* PDMediaCodecUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B13ABA1804449979BE7EF3DEC1C3ADE /* PDMediaCodecUtil.m */; };
-		72CD29686CADAD8AD4D023C4C65224ED /* PDVideoCodecAttr.h in Headers */ = {isa = PBXBuildFile; fileRef = 4257B5E9E1D981A6548A17747DC7FC7C /* PDVideoCodecAttr.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50B52E0A3429CE443E20768BC86C6160 /* PDAudioCodecBatchRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AA1499B9D8ACED9EAA51C5EC89F7A9B /* PDAudioCodecBatchRequestManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5123FE77B6BE06F57646C5AFDEA6C9F6 /* PDMediaCodecBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 026F57E415AB76D1B78B4ED264E85051 /* PDMediaCodecBatchRequest.m */; };
+		5138816CE22595BE6AF72BEDCD27E842 /* PDMediaCodecRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBBC4A3550AEFE133F2C9216CECA89D /* PDMediaCodecRequest.m */; };
+		5368328AD5D4847D9F275E66DD344AFB /* PDCodecUUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EBA7A6A9BB36CB09934F5A597A3E7C5 /* PDCodecUUID.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55C48128F86E84695C11F1CA2857187F /* PDAudioCodecOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 93F00FE1CAD7E6882786E750D98D5208 /* PDAudioCodecOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5861B0E304570D30671F78316ED50070 /* PDMediaCodecSliceRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2136B3AE4E59D943E6C0A0242B0F137B /* PDMediaCodecSliceRequestManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DA81CE3EC78895B21706832D4D01BE1 /* PDAudioCodecOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B374B393521DC47C5C531EB1061ED3BF /* PDAudioCodecOperation.m */; };
+		5DB50309E43930B3B2F08B020EBFCDDF /* PDMediaCodecRequest+Build.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AA26DE164769F39603CBE459BD49936 /* PDMediaCodecRequest+Build.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DB88738D131B5D20BE1C3A3C00E85D3 /* PDMediaCodecRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 55AB92615825D37732AEC9DD352D52A6 /* PDMediaCodecRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		748CA418C93E4319E36B789DE7E39873 /* Pods-PDMediaCodec_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D91239258E664B74FF5A09591BD851 /* Pods-PDMediaCodec_Tests-dummy.m */; };
-		76E4DAA532D602F451497089D3087077 /* PDAudioCodecRequest+Build.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D771B66ADFE9A91622A19A383B49BE /* PDAudioCodecRequest+Build.m */; };
+		7C2815DF7BE5D72E7F6700C1865BD482 /* PDMediaSplitEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 167E84414B88A6742B16F5878CEA7DD5 /* PDMediaSplitEngine.m */; };
 		8071FF9E8E1DBC4EA815136D85655BC0 /* Pods-PDMediaCodec_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0403E29D681080E8D05CC3E7431A83 /* Pods-PDMediaCodec_Example-dummy.m */; };
-		815A244DEE5BE56D7446075C55039E42 /* PDCodecUUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 57EA5EF613CE9F2B9B90CA9813BD8E52 /* PDCodecUUID.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		834BCE3F5A1AE88A90D2799CC7F8B3F3 /* PDMediaCodecExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = A4D86C6AB400C42A9B9C4C1EBA807561 /* PDMediaCodecExecutor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8AC84A7B338980C05134E21B1B9F27F6 /* PDMediaCodecRequest+Build.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C3963AF65967154134310C877D338A /* PDMediaCodecRequest+Build.m */; };
-		8B02E8C22F8A393C932E262B5CC42C8E /* PDMediaCodecQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED256F7650345CF3841671C9CD0F8FD /* PDMediaCodecQueue.m */; };
-		8E3583890E95E1D38CD13B7D9F53B28C /* PDAudioCodecBatchRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = A8AD2FCC90486DFD747107497EA46B71 /* PDAudioCodecBatchRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		912AA197B39A3D984FADE82DB57BBF97 /* PDMediaCodecRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 479413D116D21138663CBE193A319938 /* PDMediaCodecRequest.m */; };
-		92B414BE0E7A5D088F7C23E1CB457772 /* PDAudioCodec2MP3Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E6348C2703BBF41AC2BBBBE4D983CC /* PDAudioCodec2MP3Operation.m */; };
-		9C3872B169625D7AE451AC50169C2A55 /* PDMediaCodecUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C73B2F2AF226320406406ADAB0BA9AED /* PDMediaCodecUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9DF69D22AB01C8D1E830D4536E62A6F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		A35871997C39D7B17730CB59F5EB4BB6 /* PDMediaCodecExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CA7D7155A2339ABF52E745A9BEED9F /* PDMediaCodecExecutor.m */; };
-		AA10CE249DF3A00907DC31DA9920147B /* PDVideoCodecAttr.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D03D68F34067A6F080F0C694A135D7 /* PDVideoCodecAttr.m */; };
-		C156D861EF8464A9F43D39C54410C76C /* PDAudioCodecRequest+Build.h in Headers */ = {isa = PBXBuildFile; fileRef = 92FB0C9286EECFEC2CB543D428EE018C /* PDAudioCodecRequest+Build.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C47DB434FF39437DDA9B90CFB6A65BD1 /* PDMediaCodecSliceRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D57504F26241BEFFB94B20E785CCCAC6 /* PDMediaCodecSliceRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C7D78FAA4FD56C85F2A79EA2FF2D72A9 /* PDAudioCodecOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF654A20FF6B434D7ADB2D317149A4 /* PDAudioCodecOperation.m */; };
-		CBF14FDF91E9C347E998BF636F3B9078 /* PDMediaCodec-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F99F529C9ADDED7F6BC498BBC030EE /* PDMediaCodec-dummy.m */; };
-		CE7B53D009FC264635897943E7D77C89 /* lame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFE0DB87BE5AF2801541EDCB41CDABB /* lame.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CFEF245DEF6DE9C1A001E013E34A4A07 /* PDMediaCodecManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E4D7D5170E1B1954F7AC133E6DA112 /* PDMediaCodecManager.m */; };
+		80DBB905C6B2FFC56ABFF157ECEB1314 /* PDMediaCodecManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E8794C2D1026FA56940FF960CC3736E /* PDMediaCodecManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81A5D6079C80B1472A514BD27B3169AA /* PDAudioCodecRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 698D6B13EFE38ED7C8288204A2AD125A /* PDAudioCodecRequest.m */; };
+		890E5D341B1F22F403072A22F2AD6B11 /* PDMediaCodecUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 364A0521BB701809487FD024037DFC6B /* PDMediaCodecUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C816BED9A7D65835B8906FD16B5E922 /* PDMediaCodec.h in Headers */ = {isa = PBXBuildFile; fileRef = 23A16AD04FB7A2F608460E869E496DAD /* PDMediaCodec.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EC4FE75DBC3E98280CE35B9C687E8FD /* PDVideoCodecAttr.h in Headers */ = {isa = PBXBuildFile; fileRef = F935B503584CEB057E7D8E1224B96390 /* PDVideoCodecAttr.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FD92962206D66281541349787FCCDDE /* PDAudioCodecManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BED8E5F15D7E34481302B86C7AD8A8A /* PDAudioCodecManager.m */; };
+		942D2A634B1EC116BB74E43CB1C0DB33 /* lame.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB20ECDF38B6782635B6697A9C0B840 /* lame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CC4DC019DB45242B00111E6FBC971B2 /* PDMediaCodecSliceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD0340DC7F27764EF4C346A2EE0077 /* PDMediaCodecSliceRequest.m */; };
+		A0BBD6D8A979C2CD22B6AC223B0648D2 /* PDAudioCodecManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BB39CE92DF55297050F8003DD70734B2 /* PDAudioCodecManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5BD1470FE85F5A7904EE29B9E7B318F /* PDAudioCodecRequest+Build.h in Headers */ = {isa = PBXBuildFile; fileRef = C419F079205EBAB82ADA8504A1A73AAB /* PDAudioCodecRequest+Build.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9A261A5A37EC2DCE9CC0070DD0AEAD1 /* PDMediaCodecQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5780B8C6811078128E384897DF89A22C /* PDMediaCodecQueue.m */; };
+		AEAA103E4C474294A956CD841EC75AD4 /* PDMediaCodec-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CD3D72BB6967CE04256FA33ECBA7A048 /* PDMediaCodec-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BEF929D7E1FAA4ED608109E9F97962C8 /* PDMediaCodecRequest+Build.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C61F25039AC3086AB9F59D236434A32 /* PDMediaCodecRequest+Build.m */; };
+		CA5533B713F86A8B6BC8AE62B627363D /* PDMediaCodec-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD985E5175DA212D3F664FE57CD52882 /* PDMediaCodec-dummy.m */; };
 		D19A63CE98A47594F830580ECAE7A774 /* Pods-PDMediaCodec_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B31C82469A21CDD1AC34C1265C80089 /* Pods-PDMediaCodec_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E65121E2AFFB1614AC444327FE0B599B /* PDMediaSplitEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 5167910D7838DC17A351A59481ECE6D1 /* PDMediaSplitEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E9E6E62D9B7E66A501A7DD24265B9A97 /* PDMediaCodecSliceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB274DE3950401D743C5763ACC6EB57 /* PDMediaCodecSliceRequest.m */; };
-		F18A791CA179F310103227DADD2BFD7D /* PDCodecDebugTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B266E83E571B6FA5875FCF425F31FD67 /* PDCodecDebugTool.m */; };
-		F7003351A24257BCF5F8766D7360963F /* PDAudioCodecAttr.h in Headers */ = {isa = PBXBuildFile; fileRef = D3D46169F02AEC5AB3A78F5CCB2C1047 /* PDAudioCodecAttr.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F90631BA415CAB7D1580504A9215DFD5 /* PDMediaCodecManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F061755794D418B63981EC5CEF118BC /* PDMediaCodecManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1E492B408D0902AB80F3124D9609DBB /* PDMediaCodecBatchRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = A2DEE1E5DAE32252763FBC0007643549 /* PDMediaCodecBatchRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D30A9C42541C6BA563625DA84D1C92B5 /* PDAudioCodecBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC12153877867029B22A1617A254663 /* PDAudioCodecBatchRequest.m */; };
+		D35B2727692F3AF493DF191A2D2DC680 /* PDCodecDebugTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CC26893DA607FAF299B0FD2CBB740 /* PDCodecDebugTool.m */; };
+		D49B03542D41581641AF1D5A2B2DD7CB /* PDAudioCodecBatchRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = EB8D0B1287345F283F942A75B11A8A78 /* PDAudioCodecBatchRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0F62FA39FE5F23DFBDBD60AE2F08695 /* PDMediaCodecBatchRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A02E437965F5A24A5F38417244B462D9 /* PDMediaCodecBatchRequestManager.m */; };
+		EE398C1A52BC4F398BFF83A77FFA215E /* PDCodecDebugTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C9CCB2BB467ECEDE8B17FE5A91FFEAF /* PDCodecDebugTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE8DCFA178C613DC13281A00690ADF09 /* libmp3lame.a in Sources */ = {isa = PBXBuildFile; fileRef = DD9DBC98063E724A57D7F53A565459B5 /* libmp3lame.a */; };
+		EEACDF28447A5A6407FB5697AC4AECC7 /* PDMediaCodecExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F81EDF667AF0183FDE9074DBD90D793 /* PDMediaCodecExecutor.m */; };
+		F9F91D5C281BA645573285FDD96142E4 /* PDMediaCodecSliceRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = AFD34E84AE8ADF50F0F7CC83C451E06A /* PDMediaCodecSliceRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAC0758F6F51823CE04F84AC74A4A246 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		FB894D64529AAF53578F598AFAB4DB5B /* PDAudioCodec2MP3Operation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3242D53FBADDA37E29D545037954D19B /* PDAudioCodec2MP3Operation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD02630352281F6A308416686B1B5F76 /* PDMediaCodecSliceRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFEBE826EB26026F951B9F94CA87510 /* PDMediaCodecSliceRequestManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		463DB9D990C3C424A1294A4FAE01E208 /* PBXContainerItemProxy */ = {
+		2CBF29F836E5526DC0A0107CDD06347D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D9F03AFB26C87311CA321D254DEB936C;
 			remoteInfo = "Pods-PDMediaCodec_Example";
 		};
-		6A86451820ECE7E6A9DD10C6B7DBBEA7 /* PBXContainerItemProxy */ = {
+		F97D75F1D4E539911CBB06B72F19A134 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -79,89 +85,95 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		026F57E415AB76D1B78B4ED264E85051 /* PDMediaCodecBatchRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaCodecBatchRequest.m; sourceTree = "<group>"; };
+		0C47ADDAFB2356A84249C0A84BD0E9C2 /* PDMediaCodec-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PDMediaCodec-Info.plist"; sourceTree = "<group>"; };
 		0F84E01CD64A77E336894996BC9F9C80 /* Pods-PDMediaCodec_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PDMediaCodec_Example.modulemap"; sourceTree = "<group>"; };
 		14904A835B759405C21A3E7E9E9D48A5 /* Pods-PDMediaCodec_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PDMediaCodec_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		15CA7D7155A2339ABF52E745A9BEED9F /* PDMediaCodecExecutor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaCodecExecutor.m; sourceTree = "<group>"; };
-		1A8A6CC0B0566CD17F052A9E4A10180A /* PDMediaCodecBatchRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaCodecBatchRequest.m; sourceTree = "<group>"; };
-		21C3963AF65967154134310C877D338A /* PDMediaCodecRequest+Build.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PDMediaCodecRequest+Build.m"; sourceTree = "<group>"; };
+		167E84414B88A6742B16F5878CEA7DD5 /* PDMediaSplitEngine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaSplitEngine.m; sourceTree = "<group>"; };
+		2136B3AE4E59D943E6C0A0242B0F137B /* PDMediaCodecSliceRequestManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaCodecSliceRequestManager.h; sourceTree = "<group>"; };
 		22AB7E3722232068A2C33116BA4B7C34 /* Pods-PDMediaCodec_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PDMediaCodec_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		22F1863AF1D86B1BA21E5B49A8A57051 /* Pods-PDMediaCodec_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PDMediaCodec_Example.release.xcconfig"; sourceTree = "<group>"; };
-		235D4E85A9D2F0680B9912456153B6D9 /* PDAudioCodec2MP3Operation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDAudioCodec2MP3Operation.h; sourceTree = "<group>"; };
-		285A5C3404DE1B74DD8958DF3375227C /* PDMediaCodec.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PDMediaCodec.modulemap; sourceTree = "<group>"; };
-		2B392DDEF0061A2BC1772ABA1C7DA40F /* PDAudioCodecManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDAudioCodecManager.m; sourceTree = "<group>"; };
-		35F27F7D19787163F60C86AAE82CC322 /* PDMediaCodec-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PDMediaCodec-prefix.pch"; sourceTree = "<group>"; };
-		3BF737B4B7F3C734480C68ACA4AA04B5 /* PDAudioCodecRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDAudioCodecRequest.h; sourceTree = "<group>"; };
-		4257B5E9E1D981A6548A17747DC7FC7C /* PDVideoCodecAttr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDVideoCodecAttr.h; sourceTree = "<group>"; };
+		23A16AD04FB7A2F608460E869E496DAD /* PDMediaCodec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDMediaCodec.h; path = PDMediaCodec/Classes/PDMediaCodec.h; sourceTree = "<group>"; };
+		2AA1499B9D8ACED9EAA51C5EC89F7A9B /* PDAudioCodecBatchRequestManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDAudioCodecBatchRequestManager.h; sourceTree = "<group>"; };
+		311F8805281EDE1658C744B5EB6802C9 /* PDMediaCodec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PDMediaCodec.release.xcconfig; sourceTree = "<group>"; };
+		3242D53FBADDA37E29D545037954D19B /* PDAudioCodec2MP3Operation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDAudioCodec2MP3Operation.h; sourceTree = "<group>"; };
+		364A0521BB701809487FD024037DFC6B /* PDMediaCodecUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaCodecUtil.h; sourceTree = "<group>"; };
+		3B958DAC93BA015A4BDC499A57EA422F /* PDAudioCodecAttr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDAudioCodecAttr.h; sourceTree = "<group>"; };
+		3BED8E5F15D7E34481302B86C7AD8A8A /* PDAudioCodecManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDAudioCodecManager.m; sourceTree = "<group>"; };
+		3C1F68B3E29BD9CCC12374B97FABE239 /* PDAudioCodecRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDAudioCodecRequest.h; sourceTree = "<group>"; };
+		3F81EDF667AF0183FDE9074DBD90D793 /* PDMediaCodecExecutor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaCodecExecutor.m; sourceTree = "<group>"; };
 		43902487D75A23929ED09BB0FE30F897 /* Pods-PDMediaCodec_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PDMediaCodec_Example-Info.plist"; sourceTree = "<group>"; };
-		44E4D7D5170E1B1954F7AC133E6DA112 /* PDMediaCodecManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaCodecManager.m; sourceTree = "<group>"; };
-		479413D116D21138663CBE193A319938 /* PDMediaCodecRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaCodecRequest.m; sourceTree = "<group>"; };
-		4B6FDF0780A1CD1117050D9D88D1364E /* PDMediaCodecQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaCodecQueue.h; sourceTree = "<group>"; };
-		4F061755794D418B63981EC5CEF118BC /* PDMediaCodecManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaCodecManager.h; sourceTree = "<group>"; };
-		502C0850F8CD2C7CAE8AC95198E45F02 /* PDMediaSplitEngine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaSplitEngine.m; sourceTree = "<group>"; };
-		5167910D7838DC17A351A59481ECE6D1 /* PDMediaSplitEngine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaSplitEngine.h; sourceTree = "<group>"; };
-		52F99F529C9ADDED7F6BC498BBC030EE /* PDMediaCodec-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PDMediaCodec-dummy.m"; sourceTree = "<group>"; };
-		54AFD3431FC34A9D3EF72E8241F11CCB /* PDMediaCodecRequest+Build.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PDMediaCodecRequest+Build.h"; sourceTree = "<group>"; };
-		57EA5EF613CE9F2B9B90CA9813BD8E52 /* PDCodecUUID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDCodecUUID.h; sourceTree = "<group>"; };
-		590159A8F9278E5A562D83853C8C028C /* PDAudioCodecBatchRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDAudioCodecBatchRequest.m; sourceTree = "<group>"; };
-		5D523D0AA5606A968CDB642B36400639 /* PDMediaCodec-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PDMediaCodec-Info.plist"; sourceTree = "<group>"; };
-		601BEBB78C1A05F8020E9E76ADF57E5F /* PDAudioCodecManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDAudioCodecManager.h; sourceTree = "<group>"; };
+		4AA26DE164769F39603CBE459BD49936 /* PDMediaCodecRequest+Build.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PDMediaCodecRequest+Build.h"; sourceTree = "<group>"; };
+		4DCD0340DC7F27764EF4C346A2EE0077 /* PDMediaCodecSliceRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaCodecSliceRequest.m; sourceTree = "<group>"; };
+		5271FCC03C30FFC7D0960609722F5A8C /* PDAudioCodecBatchRequestManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDAudioCodecBatchRequestManager.m; sourceTree = "<group>"; };
+		55AB92615825D37732AEC9DD352D52A6 /* PDMediaCodecRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaCodecRequest.h; sourceTree = "<group>"; };
+		5780B8C6811078128E384897DF89A22C /* PDMediaCodecQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaCodecQueue.m; sourceTree = "<group>"; };
+		5C61F25039AC3086AB9F59D236434A32 /* PDMediaCodecRequest+Build.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PDMediaCodecRequest+Build.m"; sourceTree = "<group>"; };
+		5E8794C2D1026FA56940FF960CC3736E /* PDMediaCodecManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaCodecManager.h; sourceTree = "<group>"; };
+		65D3B1B3575AC1B0D1E6BD2F8E5F2DD3 /* PDMediaCodecError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaCodecError.m; sourceTree = "<group>"; };
 		65D91239258E664B74FF5A09591BD851 /* Pods-PDMediaCodec_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PDMediaCodec_Tests-dummy.m"; sourceTree = "<group>"; };
+		698D6B13EFE38ED7C8288204A2AD125A /* PDAudioCodecRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDAudioCodecRequest.m; sourceTree = "<group>"; };
+		6AC12153877867029B22A1617A254663 /* PDAudioCodecBatchRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDAudioCodecBatchRequest.m; sourceTree = "<group>"; };
 		6B31C82469A21CDD1AC34C1265C80089 /* Pods-PDMediaCodec_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PDMediaCodec_Example-umbrella.h"; sourceTree = "<group>"; };
+		6C595875B137788BECB11F3CA6ECBF1F /* PDAudioCodecRequest+Build.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PDAudioCodecRequest+Build.m"; sourceTree = "<group>"; };
 		6EBBB3D5E7F9C5FD0B8E6E750821F62E /* Pods-PDMediaCodec_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PDMediaCodec_Tests.modulemap"; sourceTree = "<group>"; };
-		7114D60FB171876612F0AEEBBC365821 /* PDCodecDebugTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDCodecDebugTool.h; sourceTree = "<group>"; };
-		717C48F768008144A6D63557D6D56086 /* PDMediaCodec-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PDMediaCodec-umbrella.h"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		78C1B6F706027E8A1B9380E4B1025F5F /* PDMediaCodec.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PDMediaCodec.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		7A0C6871C27593683E27B94F0CCFD093 /* PDMediaCodecError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaCodecError.m; sourceTree = "<group>"; };
-		7ABF654A20FF6B434D7ADB2D317149A4 /* PDAudioCodecOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDAudioCodecOperation.m; sourceTree = "<group>"; };
+		76A0780F6F909368C5FE85A527A7B7E7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		7BBBC4A3550AEFE133F2C9216CECA89D /* PDMediaCodecRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaCodecRequest.m; sourceTree = "<group>"; };
 		7C2013C40C1D699335F44F724EA8F188 /* Pods-PDMediaCodec_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PDMediaCodec_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		88661261862BCF615ED105C0F40B73E9 /* libmp3lame.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
-		8B644C9B5C42C44F8484E255A516E712 /* PDAudioCodecAttr.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDAudioCodecAttr.m; sourceTree = "<group>"; };
-		8B8209FAFEB503E2683B129C95251D4A /* PDMediaCodec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PDMediaCodec.debug.xcconfig; sourceTree = "<group>"; };
+		7F8CC26893DA607FAF299B0FD2CBB740 /* PDCodecDebugTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDCodecDebugTool.m; sourceTree = "<group>"; };
+		873398DEACD6CF9D0EFC46C758411FAE /* PDMediaCodecExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaCodecExecutor.h; sourceTree = "<group>"; };
+		8C9CCB2BB467ECEDE8B17FE5A91FFEAF /* PDCodecDebugTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDCodecDebugTool.h; sourceTree = "<group>"; };
 		8D24D2420BEB42BE5EFF2D19E602EF0D /* Pods-PDMediaCodec_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PDMediaCodec_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		8ED256F7650345CF3841671C9CD0F8FD /* PDMediaCodecQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaCodecQueue.m; sourceTree = "<group>"; };
-		9225BBD80C8D06C341523706794D2401 /* PDMediaCodecBatchRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaCodecBatchRequest.h; sourceTree = "<group>"; };
-		92FB0C9286EECFEC2CB543D428EE018C /* PDAudioCodecRequest+Build.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PDAudioCodecRequest+Build.h"; sourceTree = "<group>"; };
-		9B13ABA1804449979BE7EF3DEC1C3ADE /* PDMediaCodecUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaCodecUtil.m; sourceTree = "<group>"; };
+		8EBA7A6A9BB36CB09934F5A597A3E7C5 /* PDCodecUUID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDCodecUUID.h; sourceTree = "<group>"; };
+		9291F671D723464700E2C8C88F4DB03F /* PDMediaSplitEngine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaSplitEngine.h; sourceTree = "<group>"; };
+		93F00FE1CAD7E6882786E750D98D5208 /* PDAudioCodecOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDAudioCodecOperation.h; sourceTree = "<group>"; };
+		943FC70C0FA16B9E72ABA8B2700282B9 /* PDMediaCodecQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaCodecQueue.h; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F0403E29D681080E8D05CC3E7431A83 /* Pods-PDMediaCodec_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PDMediaCodec_Example-dummy.m"; sourceTree = "<group>"; };
-		9F4D3F925AFA152E4E8FBB564A8A6B98 /* PDAudioCodecOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDAudioCodecOperation.h; sourceTree = "<group>"; };
-		9FFE0DB87BE5AF2801541EDCB41CDABB /* lame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
-		A0D03D68F34067A6F080F0C694A135D7 /* PDVideoCodecAttr.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDVideoCodecAttr.m; sourceTree = "<group>"; };
-		A1E6348C2703BBF41AC2BBBBE4D983CC /* PDAudioCodec2MP3Operation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDAudioCodec2MP3Operation.m; sourceTree = "<group>"; };
-		A31AF212D5121E14383C322765C068D7 /* PDMediaCodecError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaCodecError.h; sourceTree = "<group>"; };
-		A3D771B66ADFE9A91622A19A383B49BE /* PDAudioCodecRequest+Build.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PDAudioCodecRequest+Build.m"; sourceTree = "<group>"; };
-		A4D86C6AB400C42A9B9C4C1EBA807561 /* PDMediaCodecExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaCodecExecutor.h; sourceTree = "<group>"; };
-		A8AD2FCC90486DFD747107497EA46B71 /* PDAudioCodecBatchRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDAudioCodecBatchRequest.h; sourceTree = "<group>"; };
+		A02E437965F5A24A5F38417244B462D9 /* PDMediaCodecBatchRequestManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaCodecBatchRequestManager.m; sourceTree = "<group>"; };
+		A0B78743E63C08345B35457A4385FDE4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		A2DEE1E5DAE32252763FBC0007643549 /* PDMediaCodecBatchRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaCodecBatchRequest.h; sourceTree = "<group>"; };
+		A4965E1AF51709C99D765520D7F84675 /* PDVideoCodecAttr.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDVideoCodecAttr.m; sourceTree = "<group>"; };
+		AFD34E84AE8ADF50F0F7CC83C451E06A /* PDMediaCodecSliceRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaCodecSliceRequest.h; sourceTree = "<group>"; };
 		B1FDF9E47C947CE4ED574573B2B7B110 /* PDMediaCodec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PDMediaCodec.framework; path = PDMediaCodec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B266E83E571B6FA5875FCF425F31FD67 /* PDCodecDebugTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDCodecDebugTool.m; sourceTree = "<group>"; };
-		B395387DF9EC1329DAD2CB1F5AC96C34 /* PDAudioCodecRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDAudioCodecRequest.m; sourceTree = "<group>"; };
+		B374B393521DC47C5C531EB1061ED3BF /* PDAudioCodecOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDAudioCodecOperation.m; sourceTree = "<group>"; };
 		B39BF622E3681612C2CD0FD0EF74C129 /* Pods-PDMediaCodec_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PDMediaCodec_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B4E1CCA3A1F635465037918242388A5C /* Pods-PDMediaCodec_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PDMediaCodec_Tests-Info.plist"; sourceTree = "<group>"; };
 		B5787CBF9E23D2A702EA0EB14DFACB66 /* Pods-PDMediaCodec_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PDMediaCodec_Example-frameworks.sh"; sourceTree = "<group>"; };
-		B7D049232006D2C1D3E6BAACD48A94C2 /* PDMediaCodec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDMediaCodec.h; path = PDMediaCodec/Classes/PDMediaCodec.h; sourceTree = "<group>"; };
 		BA176AAC1D0306109E774B7C1832CC4D /* Pods_PDMediaCodec_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PDMediaCodec_Tests.framework; path = "Pods-PDMediaCodec_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAC9C7C4EB24FB5967A816E792C0F584 /* PDCodecUUID.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDCodecUUID.m; sourceTree = "<group>"; };
+		BB1B5FDF200794D86E4A6484E8644A66 /* PDAudioCodec2MP3Operation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDAudioCodec2MP3Operation.m; sourceTree = "<group>"; };
+		BB39CE92DF55297050F8003DD70734B2 /* PDAudioCodecManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDAudioCodecManager.h; sourceTree = "<group>"; };
+		BD985E5175DA212D3F664FE57CD52882 /* PDMediaCodec-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PDMediaCodec-dummy.m"; sourceTree = "<group>"; };
 		C1405243A7C534C863CCDADD3D2B656C /* Pods-PDMediaCodec_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PDMediaCodec_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		C2EEA3C9299551C27A3EE81A32AC6197 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		C73B2F2AF226320406406ADAB0BA9AED /* PDMediaCodecUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaCodecUtil.h; sourceTree = "<group>"; };
-		CAB274DE3950401D743C5763ACC6EB57 /* PDMediaCodecSliceRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaCodecSliceRequest.m; sourceTree = "<group>"; };
-		CBF2C28C5D3A8F8036C0D80E9BD57EC7 /* PDMediaCodec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PDMediaCodec.release.xcconfig; sourceTree = "<group>"; };
-		D3D46169F02AEC5AB3A78F5CCB2C1047 /* PDAudioCodecAttr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDAudioCodecAttr.h; sourceTree = "<group>"; };
-		D57504F26241BEFFB94B20E785CCCAC6 /* PDMediaCodecSliceRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaCodecSliceRequest.h; sourceTree = "<group>"; };
+		C419F079205EBAB82ADA8504A1A73AAB /* PDAudioCodecRequest+Build.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PDAudioCodecRequest+Build.h"; sourceTree = "<group>"; };
+		C68CD6E1186FBF0D26AB00C39A637C37 /* PDMediaCodecError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaCodecError.h; sourceTree = "<group>"; };
+		CA2DC5ECC577243863B3C438AAF793ED /* PDMediaCodecBatchRequestManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaCodecBatchRequestManager.h; sourceTree = "<group>"; };
+		CD3D72BB6967CE04256FA33ECBA7A048 /* PDMediaCodec-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PDMediaCodec-umbrella.h"; sourceTree = "<group>"; };
+		D5E8F88E197C8C8320CFD02B6251DEF0 /* PDMediaCodec-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PDMediaCodec-prefix.pch"; sourceTree = "<group>"; };
+		DD9DBC98063E724A57D7F53A565459B5 /* libmp3lame.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
 		DFCC877BDF243F1917F5B5667FC44F26 /* Pods-PDMediaCodec_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PDMediaCodec_Tests-umbrella.h"; sourceTree = "<group>"; };
+		E2486F960D982DF281882CBF58F4819D /* PDMediaCodecManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaCodecManager.m; sourceTree = "<group>"; };
 		E5E22F3266E8B8C8C716F00F16E05BD4 /* Pods_PDMediaCodec_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PDMediaCodec_Example.framework; path = "Pods-PDMediaCodec_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8DCE554E4F018F397A960F9044BBCAB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		F93676EC71A2BF8B07150EF1DE175B83 /* PDMediaCodecRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDMediaCodecRequest.h; sourceTree = "<group>"; };
+		EAB20ECDF38B6782635B6697A9C0B840 /* lame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		EB8D0B1287345F283F942A75B11A8A78 /* PDAudioCodecBatchRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDAudioCodecBatchRequest.h; sourceTree = "<group>"; };
+		F0FBACAA51097C65E8A09C3F9A042340 /* PDCodecUUID.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDCodecUUID.m; sourceTree = "<group>"; };
+		F13BB2C100CD237EA7ACED6A9966C8CD /* PDMediaCodec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PDMediaCodec.debug.xcconfig; sourceTree = "<group>"; };
+		F204D94546E0ACA878CB4FD3A00CE5E7 /* PDMediaCodecUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaCodecUtil.m; sourceTree = "<group>"; };
+		F65A91EAC76EE51A3A41C206D11A9E09 /* PDMediaCodec.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PDMediaCodec.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F8EE7C8827998E274439F7D8B40120FA /* PDMediaCodec.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PDMediaCodec.modulemap; sourceTree = "<group>"; };
+		F935B503584CEB057E7D8E1224B96390 /* PDVideoCodecAttr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDVideoCodecAttr.h; sourceTree = "<group>"; };
+		FBF0F29CA1FAD27CF8044887A0257E46 /* PDAudioCodecAttr.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDAudioCodecAttr.m; sourceTree = "<group>"; };
 		FD527714A9B0096FA600A4C550BA27A4 /* Pods-PDMediaCodec_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PDMediaCodec_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		FDFEBE826EB26026F951B9F94CA87510 /* PDMediaCodecSliceRequestManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDMediaCodecSliceRequestManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7184B39C270D94F3F61EE426CCA3D4AC /* Frameworks */ = {
+		3FFEC28DF9A5602C9599452AF12F12EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DF69D22AB01C8D1E830D4536E62A6F0 /* Foundation.framework in Frameworks */,
+				FAC0758F6F51823CE04F84AC74A4A246 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,105 +196,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E8673A83F66A119EFC2922491BB6568 /* Request */ = {
+		02A38C6AC5DBB0AAD68074709D58F4ED /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				9225BBD80C8D06C341523706794D2401 /* PDMediaCodecBatchRequest.h */,
-				1A8A6CC0B0566CD17F052A9E4A10180A /* PDMediaCodecBatchRequest.m */,
-				F93676EC71A2BF8B07150EF1DE175B83 /* PDMediaCodecRequest.h */,
-				479413D116D21138663CBE193A319938 /* PDMediaCodecRequest.m */,
-				54AFD3431FC34A9D3EF72E8241F11CCB /* PDMediaCodecRequest+Build.h */,
-				21C3963AF65967154134310C877D338A /* PDMediaCodecRequest+Build.m */,
-				D57504F26241BEFFB94B20E785CCCAC6 /* PDMediaCodecSliceRequest.h */,
-				CAB274DE3950401D743C5763ACC6EB57 /* PDMediaCodecSliceRequest.m */,
+				943FC70C0FA16B9E72ABA8B2700282B9 /* PDMediaCodecQueue.h */,
+				5780B8C6811078128E384897DF89A22C /* PDMediaCodecQueue.m */,
+				9291F671D723464700E2C8C88F4DB03F /* PDMediaSplitEngine.h */,
+				167E84414B88A6742B16F5878CEA7DD5 /* PDMediaSplitEngine.m */,
+			);
+			name = Util;
+			path = Util;
+			sourceTree = "<group>";
+		};
+		085DC50CFFD336025C8E7A71F66FEA8C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				CA2DC5ECC577243863B3C438AAF793ED /* PDMediaCodecBatchRequestManager.h */,
+				A02E437965F5A24A5F38417244B462D9 /* PDMediaCodecBatchRequestManager.m */,
+				5E8794C2D1026FA56940FF960CC3736E /* PDMediaCodecManager.h */,
+				E2486F960D982DF281882CBF58F4819D /* PDMediaCodecManager.m */,
+				2136B3AE4E59D943E6C0A0242B0F137B /* PDMediaCodecSliceRequestManager.h */,
+				FDFEBE826EB26026F951B9F94CA87510 /* PDMediaCodecSliceRequestManager.m */,
+			);
+			name = Manager;
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		127C0222BB7131C029DDC66680A7EE33 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				F0D79A68C7B5EFC81761A16DC17B32D5 /* Libs */,
+				C9BE8C660EF277F9780CE1F2D0EDADE3 /* Manager */,
+				3BB1EDE1B17B7A0E16D32B21178E468D /* Operation */,
+				15016C9883E76BEAA1291D62852F9839 /* Request */,
+			);
+			name = Audio;
+			path = PDMediaCodec/Classes/Audio;
+			sourceTree = "<group>";
+		};
+		15016C9883E76BEAA1291D62852F9839 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				EB8D0B1287345F283F942A75B11A8A78 /* PDAudioCodecBatchRequest.h */,
+				6AC12153877867029B22A1617A254663 /* PDAudioCodecBatchRequest.m */,
+				3C1F68B3E29BD9CCC12374B97FABE239 /* PDAudioCodecRequest.h */,
+				698D6B13EFE38ED7C8288204A2AD125A /* PDAudioCodecRequest.m */,
+				C419F079205EBAB82ADA8504A1A73AAB /* PDAudioCodecRequest+Build.h */,
+				6C595875B137788BECB11F3CA6ECBF1F /* PDAudioCodecRequest+Build.m */,
 			);
 			name = Request;
 			path = Request;
 			sourceTree = "<group>";
 		};
-		106B4BC7F616DAA7DA01F2F3D414C539 /* Request */ = {
+		1ED5FE56BE0F58E1533DE1463FBA218E /* Debug */ = {
 			isa = PBXGroup;
 			children = (
-				A8AD2FCC90486DFD747107497EA46B71 /* PDAudioCodecBatchRequest.h */,
-				590159A8F9278E5A562D83853C8C028C /* PDAudioCodecBatchRequest.m */,
-				3BF737B4B7F3C734480C68ACA4AA04B5 /* PDAudioCodecRequest.h */,
-				B395387DF9EC1329DAD2CB1F5AC96C34 /* PDAudioCodecRequest.m */,
-				92FB0C9286EECFEC2CB543D428EE018C /* PDAudioCodecRequest+Build.h */,
-				A3D771B66ADFE9A91622A19A383B49BE /* PDAudioCodecRequest+Build.m */,
-			);
-			name = Request;
-			path = Request;
-			sourceTree = "<group>";
-		};
-		1F12AAB6C0AFD3B6F174BB5B970A1ED4 /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-				9FFE0DB87BE5AF2801541EDCB41CDABB /* lame.h */,
-				88661261862BCF615ED105C0F40B73E9 /* libmp3lame.a */,
-			);
-			name = Libs;
-			path = Libs;
-			sourceTree = "<group>";
-		};
-		2451FA36705BB459049D75DC9EDDF611 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				285A5C3404DE1B74DD8958DF3375227C /* PDMediaCodec.modulemap */,
-				52F99F529C9ADDED7F6BC498BBC030EE /* PDMediaCodec-dummy.m */,
-				5D523D0AA5606A968CDB642B36400639 /* PDMediaCodec-Info.plist */,
-				35F27F7D19787163F60C86AAE82CC322 /* PDMediaCodec-prefix.pch */,
-				717C48F768008144A6D63557D6D56086 /* PDMediaCodec-umbrella.h */,
-				8B8209FAFEB503E2683B129C95251D4A /* PDMediaCodec.debug.xcconfig */,
-				CBF2C28C5D3A8F8036C0D80E9BD57EC7 /* PDMediaCodec.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/PDMediaCodec";
-			sourceTree = "<group>";
-		};
-		395BC220115CBA11B4820A33866561AE /* Debug */ = {
-			isa = PBXGroup;
-			children = (
-				7114D60FB171876612F0AEEBBC365821 /* PDCodecDebugTool.h */,
-				B266E83E571B6FA5875FCF425F31FD67 /* PDCodecDebugTool.m */,
+				8C9CCB2BB467ECEDE8B17FE5A91FFEAF /* PDCodecDebugTool.h */,
+				7F8CC26893DA607FAF299B0FD2CBB740 /* PDCodecDebugTool.m */,
 			);
 			name = Debug;
 			path = PDMediaCodec/Classes/Debug;
 			sourceTree = "<group>";
 		};
-		3CF833937D7C693AD94F3B3BB1A6AF89 /* Base */ = {
+		3BB1EDE1B17B7A0E16D32B21178E468D /* Operation */ = {
 			isa = PBXGroup;
 			children = (
-				57EA5EF613CE9F2B9B90CA9813BD8E52 /* PDCodecUUID.h */,
-				BAC9C7C4EB24FB5967A816E792C0F584 /* PDCodecUUID.m */,
-				A31AF212D5121E14383C322765C068D7 /* PDMediaCodecError.h */,
-				7A0C6871C27593683E27B94F0CCFD093 /* PDMediaCodecError.m */,
-				C73B2F2AF226320406406ADAB0BA9AED /* PDMediaCodecUtil.h */,
-				9B13ABA1804449979BE7EF3DEC1C3ADE /* PDMediaCodecUtil.m */,
-			);
-			name = Base;
-			path = PDMediaCodec/Classes/Base;
-			sourceTree = "<group>";
-		};
-		41297F06903C45BEF339248F62C04F4A /* Operation */ = {
-			isa = PBXGroup;
-			children = (
-				235D4E85A9D2F0680B9912456153B6D9 /* PDAudioCodec2MP3Operation.h */,
-				A1E6348C2703BBF41AC2BBBBE4D983CC /* PDAudioCodec2MP3Operation.m */,
-				9F4D3F925AFA152E4E8FBB564A8A6B98 /* PDAudioCodecOperation.h */,
-				7ABF654A20FF6B434D7ADB2D317149A4 /* PDAudioCodecOperation.m */,
+				3242D53FBADDA37E29D545037954D19B /* PDAudioCodec2MP3Operation.h */,
+				BB1B5FDF200794D86E4A6484E8644A66 /* PDAudioCodec2MP3Operation.m */,
+				93F00FE1CAD7E6882786E750D98D5208 /* PDAudioCodecOperation.h */,
+				B374B393521DC47C5C531EB1061ED3BF /* PDAudioCodecOperation.m */,
 			);
 			name = Operation;
 			path = Operation;
-			sourceTree = "<group>";
-		};
-		429008A7F772F616DB9CF780118E6922 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				601BEBB78C1A05F8020E9E76ADF57E5F /* PDAudioCodecManager.h */,
-				2B392DDEF0061A2BC1772ABA1C7DA40F /* PDAudioCodecManager.m */,
-			);
-			name = Manager;
-			path = Manager;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -293,85 +278,100 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5D3C2E753C61099A46E67E05012C52D3 /* Attr */ = {
+		77F4DC2388BD353E04471050060806D5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D3D46169F02AEC5AB3A78F5CCB2C1047 /* PDAudioCodecAttr.h */,
-				8B644C9B5C42C44F8484E255A516E712 /* PDAudioCodecAttr.m */,
-				4257B5E9E1D981A6548A17747DC7FC7C /* PDVideoCodecAttr.h */,
-				A0D03D68F34067A6F080F0C694A135D7 /* PDVideoCodecAttr.m */,
+				F8EE7C8827998E274439F7D8B40120FA /* PDMediaCodec.modulemap */,
+				BD985E5175DA212D3F664FE57CD52882 /* PDMediaCodec-dummy.m */,
+				0C47ADDAFB2356A84249C0A84BD0E9C2 /* PDMediaCodec-Info.plist */,
+				D5E8F88E197C8C8320CFD02B6251DEF0 /* PDMediaCodec-prefix.pch */,
+				CD3D72BB6967CE04256FA33ECBA7A048 /* PDMediaCodec-umbrella.h */,
+				F13BB2C100CD237EA7ACED6A9966C8CD /* PDMediaCodec.debug.xcconfig */,
+				311F8805281EDE1658C744B5EB6802C9 /* PDMediaCodec.release.xcconfig */,
 			);
-			name = Attr;
-			path = Attr;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/PDMediaCodec";
 			sourceTree = "<group>";
 		};
-		7D6CBD634957A7140AC14748308F7476 /* Video */ = {
+		78496A27EF66C93829AACEA8AF8E08E5 /* PDMediaCodec */ = {
 			isa = PBXGroup;
 			children = (
-				5D3C2E753C61099A46E67E05012C52D3 /* Attr */,
-				9FA6CDAE413A046F914AACEBCCE3FCF6 /* Manager */,
-				0E8673A83F66A119EFC2922491BB6568 /* Request */,
-				8FEE7CBE77EF8655AA2C0E7C64D8B186 /* Util */,
-			);
-			name = Video;
-			path = PDMediaCodec/Classes/Video;
-			sourceTree = "<group>";
-		};
-		887F69862C0A0567F1ED93CCA1C7AE8D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8D84EE2B1C842EA3C08A287126F6BA78 /* PDMediaCodec */ = {
-			isa = PBXGroup;
-			children = (
-				B7D049232006D2C1D3E6BAACD48A94C2 /* PDMediaCodec.h */,
-				B3473B11A1AB94A23B1737067B540116 /* Audio */,
-				3CF833937D7C693AD94F3B3BB1A6AF89 /* Base */,
-				395BC220115CBA11B4820A33866561AE /* Debug */,
-				887F69862C0A0567F1ED93CCA1C7AE8D /* Frameworks */,
-				8F5F7ABCFC88963895725564FB4CB2B5 /* Pod */,
-				2451FA36705BB459049D75DC9EDDF611 /* Support Files */,
-				7D6CBD634957A7140AC14748308F7476 /* Video */,
+				23A16AD04FB7A2F608460E869E496DAD /* PDMediaCodec.h */,
+				127C0222BB7131C029DDC66680A7EE33 /* Audio */,
+				83BAF6909F82820A26022DA1CFF48CD4 /* Base */,
+				1ED5FE56BE0F58E1533DE1463FBA218E /* Debug */,
+				BFF736BECE8ADE8E7A8EE1FE4EDE1B0D /* Frameworks */,
+				B33C45CA5F83B85C89AA94FCE69D752A /* Pod */,
+				77F4DC2388BD353E04471050060806D5 /* Support Files */,
+				88F0863847A79645FE20BE51E226AAF4 /* Video */,
 			);
 			name = PDMediaCodec;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		8F5F7ABCFC88963895725564FB4CB2B5 /* Pod */ = {
+		83BAF6909F82820A26022DA1CFF48CD4 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				C2EEA3C9299551C27A3EE81A32AC6197 /* LICENSE */,
-				78C1B6F706027E8A1B9380E4B1025F5F /* PDMediaCodec.podspec */,
-				F8DCE554E4F018F397A960F9044BBCAB /* README.md */,
+				8EBA7A6A9BB36CB09934F5A597A3E7C5 /* PDCodecUUID.h */,
+				F0FBACAA51097C65E8A09C3F9A042340 /* PDCodecUUID.m */,
+				C68CD6E1186FBF0D26AB00C39A637C37 /* PDMediaCodecError.h */,
+				65D3B1B3575AC1B0D1E6BD2F8E5F2DD3 /* PDMediaCodecError.m */,
+				364A0521BB701809487FD024037DFC6B /* PDMediaCodecUtil.h */,
+				F204D94546E0ACA878CB4FD3A00CE5E7 /* PDMediaCodecUtil.m */,
 			);
-			name = Pod;
+			name = Base;
+			path = PDMediaCodec/Classes/Base;
 			sourceTree = "<group>";
 		};
-		8FEE7CBE77EF8655AA2C0E7C64D8B186 /* Util */ = {
+		88F0863847A79645FE20BE51E226AAF4 /* Video */ = {
 			isa = PBXGroup;
 			children = (
-				5167910D7838DC17A351A59481ECE6D1 /* PDMediaSplitEngine.h */,
-				502C0850F8CD2C7CAE8AC95198E45F02 /* PDMediaSplitEngine.m */,
+				8F74668581793CD41D8896FCA475B373 /* Attr */,
+				A462EB7C686D9F85F901E1AF89BF2B90 /* Executor */,
+				085DC50CFFD336025C8E7A71F66FEA8C /* Manager */,
+				A7822771347AB727B3EB345940C7BFBF /* Request */,
+				02A38C6AC5DBB0AAD68074709D58F4ED /* Util */,
 			);
-			name = Util;
-			path = Util;
+			name = Video;
+			path = PDMediaCodec/Classes/Video;
 			sourceTree = "<group>";
 		};
-		9FA6CDAE413A046F914AACEBCCE3FCF6 /* Manager */ = {
+		8F74668581793CD41D8896FCA475B373 /* Attr */ = {
 			isa = PBXGroup;
 			children = (
-				A4D86C6AB400C42A9B9C4C1EBA807561 /* PDMediaCodecExecutor.h */,
-				15CA7D7155A2339ABF52E745A9BEED9F /* PDMediaCodecExecutor.m */,
-				4F061755794D418B63981EC5CEF118BC /* PDMediaCodecManager.h */,
-				44E4D7D5170E1B1954F7AC133E6DA112 /* PDMediaCodecManager.m */,
-				4B6FDF0780A1CD1117050D9D88D1364E /* PDMediaCodecQueue.h */,
-				8ED256F7650345CF3841671C9CD0F8FD /* PDMediaCodecQueue.m */,
+				3B958DAC93BA015A4BDC499A57EA422F /* PDAudioCodecAttr.h */,
+				FBF0F29CA1FAD27CF8044887A0257E46 /* PDAudioCodecAttr.m */,
+				F935B503584CEB057E7D8E1224B96390 /* PDVideoCodecAttr.h */,
+				A4965E1AF51709C99D765520D7F84675 /* PDVideoCodecAttr.m */,
 			);
-			name = Manager;
-			path = Manager;
+			name = Attr;
+			path = Attr;
+			sourceTree = "<group>";
+		};
+		A462EB7C686D9F85F901E1AF89BF2B90 /* Executor */ = {
+			isa = PBXGroup;
+			children = (
+				873398DEACD6CF9D0EFC46C758411FAE /* PDMediaCodecExecutor.h */,
+				3F81EDF667AF0183FDE9074DBD90D793 /* PDMediaCodecExecutor.m */,
+			);
+			name = Executor;
+			path = Executor;
+			sourceTree = "<group>";
+		};
+		A7822771347AB727B3EB345940C7BFBF /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				A2DEE1E5DAE32252763FBC0007643549 /* PDMediaCodecBatchRequest.h */,
+				026F57E415AB76D1B78B4ED264E85051 /* PDMediaCodecBatchRequest.m */,
+				55AB92615825D37732AEC9DD352D52A6 /* PDMediaCodecRequest.h */,
+				7BBBC4A3550AEFE133F2C9216CECA89D /* PDMediaCodecRequest.m */,
+				4AA26DE164769F39603CBE459BD49936 /* PDMediaCodecRequest+Build.h */,
+				5C61F25039AC3086AB9F59D236434A32 /* PDMediaCodecRequest+Build.m */,
+				AFD34E84AE8ADF50F0F7CC83C451E06A /* PDMediaCodecSliceRequest.h */,
+				4DCD0340DC7F27764EF4C346A2EE0077 /* PDMediaCodecSliceRequest.m */,
+			);
+			name = Request;
+			path = Request;
 			sourceTree = "<group>";
 		};
 		AF3D1D240475F476BB809DAFAA3F9CE0 /* Pods-PDMediaCodec_Tests */ = {
@@ -390,24 +390,41 @@
 			path = "Target Support Files/Pods-PDMediaCodec_Tests";
 			sourceTree = "<group>";
 		};
-		B3473B11A1AB94A23B1737067B540116 /* Audio */ = {
+		B33C45CA5F83B85C89AA94FCE69D752A /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				1F12AAB6C0AFD3B6F174BB5B970A1ED4 /* Libs */,
-				429008A7F772F616DB9CF780118E6922 /* Manager */,
-				41297F06903C45BEF339248F62C04F4A /* Operation */,
-				106B4BC7F616DAA7DA01F2F3D414C539 /* Request */,
+				A0B78743E63C08345B35457A4385FDE4 /* LICENSE */,
+				F65A91EAC76EE51A3A41C206D11A9E09 /* PDMediaCodec.podspec */,
+				76A0780F6F909368C5FE85A527A7B7E7 /* README.md */,
 			);
-			name = Audio;
-			path = PDMediaCodec/Classes/Audio;
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		BFF736BECE8ADE8E7A8EE1FE4EDE1B0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C60A317751C869BDB4EFEE474FA342C7 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8D84EE2B1C842EA3C08A287126F6BA78 /* PDMediaCodec */,
+				78496A27EF66C93829AACEA8AF8E08E5 /* PDMediaCodec */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		C9BE8C660EF277F9780CE1F2D0EDADE3 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2AA1499B9D8ACED9EAA51C5EC89F7A9B /* PDAudioCodecBatchRequestManager.h */,
+				5271FCC03C30FFC7D0960609722F5A8C /* PDAudioCodecBatchRequestManager.m */,
+				BB39CE92DF55297050F8003DD70734B2 /* PDAudioCodecManager.h */,
+				3BED8E5F15D7E34481302B86C7AD8A8A /* PDAudioCodecManager.m */,
+			);
+			name = Manager;
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -465,44 +482,57 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		F0D79A68C7B5EFC81761A16DC17B32D5 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				EAB20ECDF38B6782635B6697A9C0B840 /* lame.h */,
+				DD9DBC98063E724A57D7F53A565459B5 /* libmp3lame.a */,
+			);
+			name = Libs;
+			path = Libs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		6322B1C6A0BE24B11B4931A489428F01 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				942D2A634B1EC116BB74E43CB1C0DB33 /* lame.h in Headers */,
+				FB894D64529AAF53578F598AFAB4DB5B /* PDAudioCodec2MP3Operation.h in Headers */,
+				06E2DFFBA2155476B2728091A9C4AE17 /* PDAudioCodecAttr.h in Headers */,
+				D49B03542D41581641AF1D5A2B2DD7CB /* PDAudioCodecBatchRequest.h in Headers */,
+				50B52E0A3429CE443E20768BC86C6160 /* PDAudioCodecBatchRequestManager.h in Headers */,
+				A0BBD6D8A979C2CD22B6AC223B0648D2 /* PDAudioCodecManager.h in Headers */,
+				55C48128F86E84695C11F1CA2857187F /* PDAudioCodecOperation.h in Headers */,
+				A5BD1470FE85F5A7904EE29B9E7B318F /* PDAudioCodecRequest+Build.h in Headers */,
+				1F8F1ACEB86229BA37D170068DBD7974 /* PDAudioCodecRequest.h in Headers */,
+				EE398C1A52BC4F398BFF83A77FFA215E /* PDCodecDebugTool.h in Headers */,
+				5368328AD5D4847D9F275E66DD344AFB /* PDCodecUUID.h in Headers */,
+				AEAA103E4C474294A956CD841EC75AD4 /* PDMediaCodec-umbrella.h in Headers */,
+				8C816BED9A7D65835B8906FD16B5E922 /* PDMediaCodec.h in Headers */,
+				D1E492B408D0902AB80F3124D9609DBB /* PDMediaCodecBatchRequest.h in Headers */,
+				3B838E094CEDF0B2D0E84475F963E46F /* PDMediaCodecBatchRequestManager.h in Headers */,
+				49CCC6BE8D310791031A56ACC2A1F754 /* PDMediaCodecError.h in Headers */,
+				314E6459CC7102C6DD9ABA4252E40037 /* PDMediaCodecExecutor.h in Headers */,
+				80DBB905C6B2FFC56ABFF157ECEB1314 /* PDMediaCodecManager.h in Headers */,
+				2B932412C82C39742AC0ADD4CAD82850 /* PDMediaCodecQueue.h in Headers */,
+				5DB50309E43930B3B2F08B020EBFCDDF /* PDMediaCodecRequest+Build.h in Headers */,
+				5DB88738D131B5D20BE1C3A3C00E85D3 /* PDMediaCodecRequest.h in Headers */,
+				F9F91D5C281BA645573285FDD96142E4 /* PDMediaCodecSliceRequest.h in Headers */,
+				5861B0E304570D30671F78316ED50070 /* PDMediaCodecSliceRequestManager.h in Headers */,
+				890E5D341B1F22F403072A22F2AD6B11 /* PDMediaCodecUtil.h in Headers */,
+				1CF70657827EA4F97CAEC53B1F99DEDB /* PDMediaSplitEngine.h in Headers */,
+				8EC4FE75DBC3E98280CE35B9C687E8FD /* PDVideoCodecAttr.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		882C3972B07FE27328B08DB985AB5432 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				209756B9BB6E0E21245DBDF9B939B572 /* Pods-PDMediaCodec_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B72E15AB264E08F8E21BB97097E4E48E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CE7B53D009FC264635897943E7D77C89 /* lame.h in Headers */,
-				2824363CF92A4625885C267D82E79BC6 /* PDAudioCodec2MP3Operation.h in Headers */,
-				F7003351A24257BCF5F8766D7360963F /* PDAudioCodecAttr.h in Headers */,
-				8E3583890E95E1D38CD13B7D9F53B28C /* PDAudioCodecBatchRequest.h in Headers */,
-				3AC2381F84D957B45375AC25FCB22C49 /* PDAudioCodecManager.h in Headers */,
-				1EBD7EFBF0575CD3A873D5F6AE88C78C /* PDAudioCodecOperation.h in Headers */,
-				C156D861EF8464A9F43D39C54410C76C /* PDAudioCodecRequest+Build.h in Headers */,
-				26F4F0D41DF08429850803C0DC221B16 /* PDAudioCodecRequest.h in Headers */,
-				5A97DE30E85A775DE5094D447EF32DD0 /* PDCodecDebugTool.h in Headers */,
-				815A244DEE5BE56D7446075C55039E42 /* PDCodecUUID.h in Headers */,
-				4595F12986A20C89514512AEC7D5E0F3 /* PDMediaCodec-umbrella.h in Headers */,
-				1D8EA2B4502D22E7C82249118EE3A96D /* PDMediaCodec.h in Headers */,
-				3E0CC69E4CC6CCA0CA8A0F9C4935EB21 /* PDMediaCodecBatchRequest.h in Headers */,
-				48FF63715A0949E1C4C23522FDA599C4 /* PDMediaCodecError.h in Headers */,
-				834BCE3F5A1AE88A90D2799CC7F8B3F3 /* PDMediaCodecExecutor.h in Headers */,
-				F90631BA415CAB7D1580504A9215DFD5 /* PDMediaCodecManager.h in Headers */,
-				4977A5898E94BD068B48FCF01C591102 /* PDMediaCodecQueue.h in Headers */,
-				6C067E23EA0D7CC87197ED746A61B3AC /* PDMediaCodecRequest+Build.h in Headers */,
-				299BBB5A9DEB4B071C813C97EC0D42D9 /* PDMediaCodecRequest.h in Headers */,
-				C47DB434FF39437DDA9B90CFB6A65BD1 /* PDMediaCodecSliceRequest.h in Headers */,
-				9C3872B169625D7AE451AC50169C2A55 /* PDMediaCodecUtil.h in Headers */,
-				E65121E2AFFB1614AC444327FE0B599B /* PDMediaSplitEngine.h in Headers */,
-				72CD29686CADAD8AD4D023C4C65224ED /* PDVideoCodecAttr.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,12 +549,12 @@
 /* Begin PBXNativeTarget section */
 		5BD749444C70437D5F4A035C3F27E2B7 /* PDMediaCodec */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E81F86BEAB78EBEC0586CD1E012F810 /* Build configuration list for PBXNativeTarget "PDMediaCodec" */;
+			buildConfigurationList = F2B8328C6DDE2E8F0A437362CB2F909A /* Build configuration list for PBXNativeTarget "PDMediaCodec" */;
 			buildPhases = (
-				B72E15AB264E08F8E21BB97097E4E48E /* Headers */,
-				48F2C685DC0B0CA2B99EF1E3A5E3B783 /* Sources */,
-				7184B39C270D94F3F61EE426CCA3D4AC /* Frameworks */,
-				133C37535B65E6033A60DBF4FA0E0D31 /* Resources */,
+				6322B1C6A0BE24B11B4931A489428F01 /* Headers */,
+				DAF47CAC187AFA202CDEEB35E487EA01 /* Sources */,
+				3FFEC28DF9A5602C9599452AF12F12EF /* Frameworks */,
+				037381545B80D441CF0D19A8AE176D7D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -547,7 +577,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				87F5FDC18B04BF2F3B54DF469C8C0EE3 /* PBXTargetDependency */,
+				CDF280D075885CA3497814238AF8DA8C /* PBXTargetDependency */,
 			);
 			name = "Pods-PDMediaCodec_Tests";
 			productName = "Pods-PDMediaCodec_Tests";
@@ -566,7 +596,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				E3EDCCB5EA7D786CFD3A06B20D6897D3 /* PBXTargetDependency */,
+				8CA9809BB49A5EE4CE8CBF11B7074983 /* PBXTargetDependency */,
 			);
 			name = "Pods-PDMediaCodec_Example";
 			productName = "Pods-PDMediaCodec_Example";
@@ -603,7 +633,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		133C37535B65E6033A60DBF4FA0E0D31 /* Resources */ = {
+		037381545B80D441CF0D19A8AE176D7D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -627,35 +657,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		48F2C685DC0B0CA2B99EF1E3A5E3B783 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				12215304F3DE23D1679EE5A19B1F4F2A /* libmp3lame.a in Sources */,
-				92B414BE0E7A5D088F7C23E1CB457772 /* PDAudioCodec2MP3Operation.m in Sources */,
-				68CB847912B696DD6D6F643BE148D76F /* PDAudioCodecAttr.m in Sources */,
-				038834094FA0EC77A794FBE9918981CB /* PDAudioCodecBatchRequest.m in Sources */,
-				23628F1798779174575458267C7596EC /* PDAudioCodecManager.m in Sources */,
-				C7D78FAA4FD56C85F2A79EA2FF2D72A9 /* PDAudioCodecOperation.m in Sources */,
-				76E4DAA532D602F451497089D3087077 /* PDAudioCodecRequest+Build.m in Sources */,
-				0C220A04258CBAFEA13B9B6BED2D8422 /* PDAudioCodecRequest.m in Sources */,
-				F18A791CA179F310103227DADD2BFD7D /* PDCodecDebugTool.m in Sources */,
-				51D7FFF38D21A7840E84884D27B50E70 /* PDCodecUUID.m in Sources */,
-				CBF14FDF91E9C347E998BF636F3B9078 /* PDMediaCodec-dummy.m in Sources */,
-				25D32859A6B49BB85925BF8439A4BB5E /* PDMediaCodecBatchRequest.m in Sources */,
-				2E21AA065FE66744DA2F9B5A0AEDBBC5 /* PDMediaCodecError.m in Sources */,
-				A35871997C39D7B17730CB59F5EB4BB6 /* PDMediaCodecExecutor.m in Sources */,
-				CFEF245DEF6DE9C1A001E013E34A4A07 /* PDMediaCodecManager.m in Sources */,
-				8B02E8C22F8A393C932E262B5CC42C8E /* PDMediaCodecQueue.m in Sources */,
-				8AC84A7B338980C05134E21B1B9F27F6 /* PDMediaCodecRequest+Build.m in Sources */,
-				912AA197B39A3D984FADE82DB57BBF97 /* PDMediaCodecRequest.m in Sources */,
-				E9E6E62D9B7E66A501A7DD24265B9A97 /* PDMediaCodecSliceRequest.m in Sources */,
-				6C648544C4E3B87A8CB81A0A0B833A90 /* PDMediaCodecUtil.m in Sources */,
-				4D27C8CD082012A27FE99C22C6212BD3 /* PDMediaSplitEngine.m in Sources */,
-				AA10CE249DF3A00907DC31DA9920147B /* PDVideoCodecAttr.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6C3F0D74307379757590A966C6756905 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -672,24 +673,86 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DAF47CAC187AFA202CDEEB35E487EA01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE8DCFA178C613DC13281A00690ADF09 /* libmp3lame.a in Sources */,
+				1AE3EE0E32037E493CEC6DD0CC0FC121 /* PDAudioCodec2MP3Operation.m in Sources */,
+				3CE8EDC4C56CA57DEBBBB34F4F350CA6 /* PDAudioCodecAttr.m in Sources */,
+				D30A9C42541C6BA563625DA84D1C92B5 /* PDAudioCodecBatchRequest.m in Sources */,
+				49F6D1B022CDD10D4911D0B7A44EA863 /* PDAudioCodecBatchRequestManager.m in Sources */,
+				8FD92962206D66281541349787FCCDDE /* PDAudioCodecManager.m in Sources */,
+				5DA81CE3EC78895B21706832D4D01BE1 /* PDAudioCodecOperation.m in Sources */,
+				31C8B4F5AB4D289EB521912CFC2F42C3 /* PDAudioCodecRequest+Build.m in Sources */,
+				81A5D6079C80B1472A514BD27B3169AA /* PDAudioCodecRequest.m in Sources */,
+				D35B2727692F3AF493DF191A2D2DC680 /* PDCodecDebugTool.m in Sources */,
+				16FA65C2BD4EE22027518FED864EA150 /* PDCodecUUID.m in Sources */,
+				CA5533B713F86A8B6BC8AE62B627363D /* PDMediaCodec-dummy.m in Sources */,
+				5123FE77B6BE06F57646C5AFDEA6C9F6 /* PDMediaCodecBatchRequest.m in Sources */,
+				E0F62FA39FE5F23DFBDBD60AE2F08695 /* PDMediaCodecBatchRequestManager.m in Sources */,
+				21DC9CE05944E02DA2C29F3A5E5094D0 /* PDMediaCodecError.m in Sources */,
+				EEACDF28447A5A6407FB5697AC4AECC7 /* PDMediaCodecExecutor.m in Sources */,
+				429A45C1DA67A0A848E75DCBCD03B2EB /* PDMediaCodecManager.m in Sources */,
+				A9A261A5A37EC2DCE9CC0070DD0AEAD1 /* PDMediaCodecQueue.m in Sources */,
+				BEF929D7E1FAA4ED608109E9F97962C8 /* PDMediaCodecRequest+Build.m in Sources */,
+				5138816CE22595BE6AF72BEDCD27E842 /* PDMediaCodecRequest.m in Sources */,
+				9CC4DC019DB45242B00111E6FBC971B2 /* PDMediaCodecSliceRequest.m in Sources */,
+				FD02630352281F6A308416686B1B5F76 /* PDMediaCodecSliceRequestManager.m in Sources */,
+				02BC9BBECF54FF81FCCB300B0C9CF720 /* PDMediaCodecUtil.m in Sources */,
+				7C2815DF7BE5D72E7F6700C1865BD482 /* PDMediaSplitEngine.m in Sources */,
+				4A975EF2AF73911590D692F2FCDB7D8E /* PDVideoCodecAttr.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		87F5FDC18B04BF2F3B54DF469C8C0EE3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-PDMediaCodec_Example";
-			target = D9F03AFB26C87311CA321D254DEB936C /* Pods-PDMediaCodec_Example */;
-			targetProxy = 463DB9D990C3C424A1294A4FAE01E208 /* PBXContainerItemProxy */;
-		};
-		E3EDCCB5EA7D786CFD3A06B20D6897D3 /* PBXTargetDependency */ = {
+		8CA9809BB49A5EE4CE8CBF11B7074983 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PDMediaCodec;
 			target = 5BD749444C70437D5F4A035C3F27E2B7 /* PDMediaCodec */;
-			targetProxy = 6A86451820ECE7E6A9DD10C6B7DBBEA7 /* PBXContainerItemProxy */;
+			targetProxy = F97D75F1D4E539911CBB06B72F19A134 /* PBXContainerItemProxy */;
+		};
+		CDF280D075885CA3497814238AF8DA8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PDMediaCodec_Example";
+			target = D9F03AFB26C87311CA321D254DEB936C /* Pods-PDMediaCodec_Example */;
+			targetProxy = 2CBF29F836E5526DC0A0107CDD06347D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		27486DE3FF11CA57A9D999A098BECFBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F13BB2C100CD237EA7ACED6A9966C8CD /* PDMediaCodec.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PDMediaCodec/PDMediaCodec-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PDMediaCodec/PDMediaCodec-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PDMediaCodec/PDMediaCodec.modulemap";
+				PRODUCT_MODULE_NAME = PDMediaCodec;
+				PRODUCT_NAME = PDMediaCodec;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		2D0FB339CCF16F7369BC26A843243863 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B39BF622E3681612C2CD0FD0EF74C129 /* Pods-PDMediaCodec_Tests.release.xcconfig */;
@@ -723,36 +786,6 @@
 			};
 			name = Release;
 		};
-		3CFCE4819A990A7C58EB33A6325D9B43 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B8209FAFEB503E2683B129C95251D4A /* PDMediaCodec.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PDMediaCodec/PDMediaCodec-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PDMediaCodec/PDMediaCodec-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PDMediaCodec/PDMediaCodec.modulemap";
-				PRODUCT_MODULE_NAME = PDMediaCodec;
-				PRODUCT_NAME = PDMediaCodec;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		444D1F7F4B8236C3A548B1183C7E250A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C2013C40C1D699335F44F724EA8F188 /* Pods-PDMediaCodec_Example.debug.xcconfig */;
@@ -784,6 +817,37 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		A5782CFD06252F9D05C4BB26E3D2E5EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 311F8805281EDE1658C744B5EB6802C9 /* PDMediaCodec.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PDMediaCodec/PDMediaCodec-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PDMediaCodec/PDMediaCodec-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PDMediaCodec/PDMediaCodec.modulemap";
+				PRODUCT_MODULE_NAME = PDMediaCodec;
+				PRODUCT_NAME = PDMediaCodec;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		C14E932D4C3EFCC589F7DEABCEC18F22 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -843,37 +907,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		D3C5165D1EDBEAEA3F406635D59601B6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBF2C28C5D3A8F8036C0D80E9BD57EC7 /* PDMediaCodec.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PDMediaCodec/PDMediaCodec-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PDMediaCodec/PDMediaCodec-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PDMediaCodec/PDMediaCodec.modulemap";
-				PRODUCT_MODULE_NAME = PDMediaCodec;
-				PRODUCT_NAME = PDMediaCodec;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1010,15 +1043,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0E81F86BEAB78EBEC0586CD1E012F810 /* Build configuration list for PBXNativeTarget "PDMediaCodec" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3CFCE4819A990A7C58EB33A6325D9B43 /* Debug */,
-				D3C5165D1EDBEAEA3F406635D59601B6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1042,6 +1066,15 @@
 			buildConfigurations = (
 				FE33D6988FC6DC2E09C399EEB249D5F4 /* Debug */,
 				2D0FB339CCF16F7369BC26A843243863 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2B8328C6DDE2E8F0A437362CB2F909A /* Build configuration list for PBXNativeTarget "PDMediaCodec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27486DE3FF11CA57A9D999A098BECFBD /* Debug */,
+				A5782CFD06252F9D05C4BB26E3D2E5EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

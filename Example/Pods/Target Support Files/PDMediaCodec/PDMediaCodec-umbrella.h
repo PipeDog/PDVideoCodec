@@ -11,6 +11,7 @@
 #endif
 
 #import "lame.h"
+#import "PDAudioCodecBatchRequestManager.h"
 #import "PDAudioCodecManager.h"
 #import "PDAudioCodec2MP3Operation.h"
 #import "PDAudioCodecOperation.h"
@@ -25,12 +26,14 @@
 #import "PDAudioCodecAttr.h"
 #import "PDVideoCodecAttr.h"
 #import "PDMediaCodecExecutor.h"
+#import "PDMediaCodecBatchRequestManager.h"
 #import "PDMediaCodecManager.h"
-#import "PDMediaCodecQueue.h"
+#import "PDMediaCodecSliceRequestManager.h"
 #import "PDMediaCodecBatchRequest.h"
 #import "PDMediaCodecRequest+Build.h"
 #import "PDMediaCodecRequest.h"
 #import "PDMediaCodecSliceRequest.h"
+#import "PDMediaCodecQueue.h"
 #import "PDMediaSplitEngine.h"
 
 FOUNDATION_EXPORT double PDMediaCodecVersionNumber;
