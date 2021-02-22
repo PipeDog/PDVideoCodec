@@ -14,7 +14,7 @@
 #import "PDMediaCodecUtil.h"
 
 static inline BOOL PDFloatEqualToFloat(CGFloat f1, CGFloat f2) {
-    return fabs(f1 - f2) < 0.01f;
+    return fabs(f1 - f2) < 0.000001f;
 }
 
 @interface PDMediaCodecExecutor ()
