@@ -202,21 +202,24 @@ static inline BOOL PDFloatEqualToFloat(CGFloat f1, CGFloat f2) {
                     trackDimensions = [assetVideoTrack naturalSize];
                 }
                 
-                if (PDFloatEqualToFloat(trackDimensions.width / trackDimensions.height, 4.f / 3.f)) {
+                CGFloat width = trackDimensions.width, height = trackDimensions.height;
+                
+                // Resize if equal to the specified aspect ratio
+                if (PDFloatEqualToFloat(width / height, 4.f / 3.f) && width > 640.f) {
                     videoSettings[AVVideoWidthKey] = @(640.f);
                     videoSettings[AVVideoHeightKey] = @(480.f);
-                } else if (PDFloatEqualToFloat(trackDimensions.width / trackDimensions.height, 3.f / 4.f)) {
+                } else if (PDFloatEqualToFloat(width / height, 3.f / 4.f) && width > 480.f) {
                     videoSettings[AVVideoWidthKey] = @(480.f);
                     videoSettings[AVVideoHeightKey] = @(640.f);
-                } else if (PDFloatEqualToFloat(trackDimensions.width / trackDimensions.height, 16.f / 9.f)) {
+                } else if (PDFloatEqualToFloat(width / height, 16.f / 9.f) && width > 960.f) {
                     videoSettings[AVVideoWidthKey] = @(960.f);
                     videoSettings[AVVideoHeightKey] = @(540.f);
-                } else if (PDFloatEqualToFloat(trackDimensions.width / trackDimensions.height, 9.f / 16.f)) {
+                } else if (PDFloatEqualToFloat(width / height, 9.f / 16.f) && width > 540.f) {
                     videoSettings[AVVideoWidthKey] = @(540.f);
                     videoSettings[AVVideoHeightKey] = @(960.f);
                 } else {
-                    videoSettings[AVVideoWidthKey] = @(trackDimensions.width);
-                    videoSettings[AVVideoHeightKey] = @(trackDimensions.height);
+                    videoSettings[AVVideoWidthKey] = @(width);
+                    videoSettings[AVVideoHeightKey] = @(height);
                 }
             }
             
