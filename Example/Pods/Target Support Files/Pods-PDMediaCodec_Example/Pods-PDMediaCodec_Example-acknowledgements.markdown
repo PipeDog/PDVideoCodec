@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## PDMediaCodec
 
-Copyright (c) 2021 liang <leiliang4@xdf.cn>
+Copyright (c) 2021 liang <1007279249@qq.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
