@@ -56,7 +56,7 @@ static PDMediaCodecManager *__defaultManager;
     self = [super init];
     if (self) {
         _lock = dispatch_semaphore_create(1);
-        _maxConcurrentCodecCount = 3;
+        _maxConcurrentCodecCount = [NSProcessInfo processInfo].activeProcessorCount;
         _requestMap = [NSMutableDictionary dictionary];
         _executorMap = [NSMutableDictionary dictionary];
         _executingQueue = [[PDMediaCodecQueue alloc] initWithName:@"com.codec-queue.executing"];

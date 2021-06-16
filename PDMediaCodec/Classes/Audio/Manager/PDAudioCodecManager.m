@@ -51,7 +51,8 @@ static PDAudioCodecManager *__defaultManager;
     if (self) {
         _lock = dispatch_semaphore_create(1);
         _codecQueue = [[NSOperationQueue alloc] init];
-        _codecQueue.maxConcurrentOperationCount = 3;
+        _codecQueue.maxConcurrentOperationCount =
+                        [NSProcessInfo processInfo].activeProcessorCount;
         _requestMap = [NSMutableDictionary dictionary];
         _operationMap = [NSMutableDictionary dictionary];
         
