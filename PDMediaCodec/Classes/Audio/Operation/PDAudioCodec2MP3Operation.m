@@ -28,67 +28,69 @@
 }
 
 - (void)main {
-    self.state = NEAudioCodecStateStarted;
-    
-    NSError *outError;
-    if (![self prepareRunningContextWithError:&outError]) {
-        self.state = NEAudioCodecStateFailed;
-        [self notifyWithResult:NO error:outError];
-        return;
-    }
-    
-    @try {
-        FILE *fwav = fopen([self.request.srcURL.path cStringUsingEncoding:NSASCIIStringEncoding], "rb");
-        FILE *fmp3 = fopen([self.request.dstURL.path cStringUsingEncoding:NSASCIIStringEncoding], "wb+");
+    @autoreleasepool {
+        self.state = NEAudioCodecStateStarted;
         
-        // Skip PCM header
-        fseek(fwav, 4 * 1024, SEEK_CUR);
+        NSError *outError;
+        if (![self prepareRunningContextWithError:&outError]) {
+            self.state = NEAudioCodecStateFailed;
+            [self notifyWithResult:NO error:outError];
+            return;
+        }
         
-        const int PCM_SIZE = 8192;
-        const int MP3_SIZE = 8192;
-        int channel = 1;
-        
-        short int wav_buffer[PCM_SIZE*channel];
-        unsigned char mp3_buffer[MP3_SIZE];
-        
-        lame_t lame = lame_init();
-        // Set sample rate
-        lame_set_in_samplerate(lame , 8000);
-        lame_set_out_samplerate(lame, 8000);
-        lame_set_num_channels(lame, channel);
-        lame_set_brate(lame, 32);
-        
-        // Set MP3 codec mode
-        lame_init_params(lame);
-        
-        long read;
-        int write;
-        do {
-            // Stop codec if cancelled.
-            if (self.state == NEAudioCodecStateCancelled) {
-                break;
-            }
+        @try {
+            FILE *fwav = fopen([self.request.srcURL.path cStringUsingEncoding:NSASCIIStringEncoding], "rb");
+            FILE *fmp3 = fopen([self.request.dstURL.path cStringUsingEncoding:NSASCIIStringEncoding], "wb+");
             
-            read = fread(wav_buffer, sizeof(short int)*channel, PCM_SIZE, fwav);
-            if (read != 0) {
-                write = lame_encode_buffer(lame, wav_buffer, NULL, (int)read, mp3_buffer, MP3_SIZE);
-            } else {
-                write = lame_encode_flush(lame, mp3_buffer, MP3_SIZE);
-            }
-            fwrite(mp3_buffer, sizeof(unsigned char), write, fmp3);
-        } while (read != 0);
-        
-        lame_close(lame);
-        fclose(fwav);
-        fclose(fmp3);
-    } @catch (NSException *exception) {
-        self.state = NEAudioCodecStateFailed;
-        NSError *error = PDErrorWithDomain(PDCodecErrorDomain,
-                                           PDCodecFailedErrorCode,
-                                           @"Codec audio catch exception = %@, request = `%@`!", exception, self.request);
-        [self notifyWithResult:NO error:error];
-    } @finally {
-        [self checkStateThenNotifyRequest];
+            // Skip PCM header
+            fseek(fwav, 4 * 1024, SEEK_CUR);
+            
+            const int PCM_SIZE = 8192;
+            const int MP3_SIZE = 8192;
+            int channel = 1;
+            
+            short int wav_buffer[PCM_SIZE*channel];
+            unsigned char mp3_buffer[MP3_SIZE];
+            
+            lame_t lame = lame_init();
+            // Set sample rate
+            lame_set_in_samplerate(lame , 8000);
+            lame_set_out_samplerate(lame, 8000);
+            lame_set_num_channels(lame, channel);
+            lame_set_brate(lame, 32);
+            
+            // Set MP3 codec mode
+            lame_init_params(lame);
+            
+            long read;
+            int write;
+            do {
+                // Stop codec if cancelled.
+                if (self.state == NEAudioCodecStateCancelled) {
+                    break;
+                }
+                
+                read = fread(wav_buffer, sizeof(short int)*channel, PCM_SIZE, fwav);
+                if (read != 0) {
+                    write = lame_encode_buffer(lame, wav_buffer, NULL, (int)read, mp3_buffer, MP3_SIZE);
+                } else {
+                    write = lame_encode_flush(lame, mp3_buffer, MP3_SIZE);
+                }
+                fwrite(mp3_buffer, sizeof(unsigned char), write, fmp3);
+            } while (read != 0);
+            
+            lame_close(lame);
+            fclose(fwav);
+            fclose(fmp3);
+        } @catch (NSException *exception) {
+            self.state = NEAudioCodecStateFailed;
+            NSError *error = PDErrorWithDomain(PDCodecErrorDomain,
+                                               PDCodecFailedErrorCode,
+                                               @"Codec audio catch exception = %@, request = `%@`!", exception, self.request);
+            [self notifyWithResult:NO error:error];
+        } @finally {
+            [self checkStateThenNotifyRequest];
+        }
     }
 }
 

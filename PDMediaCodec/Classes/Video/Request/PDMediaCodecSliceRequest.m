@@ -96,12 +96,17 @@
 }
 
 - (void)sendBatchRequestWithDstURLs:(NSArray<NSURL *> *)dstURLs {
+    __weak typeof(self) weakSelf = self;
+    
     // Transform URLs
     NSMutableArray *batchRequests = [NSMutableArray array];
     for (NSURL *dstURL in dstURLs) {
         [batchRequests addObject:[PDMediaCodecRequest requestWithBuilder:^(id<PDMediaCodecRequestBuilder>  _Nonnull builder) {
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            if (!strongSelf) { return; }
+            
             builder.srcURL = dstURL;
-            builder.dstURL = [self afterSplitMediaURL:dstURL];
+            builder.dstURL = [strongSelf afterSplitMediaURL:dstURL];
         }]];
     }
     
@@ -114,8 +119,11 @@
                              PDMediaCodecRequestMap  _Nullable successRequestMap,
                              PDMediaCodecRequestMap  _Nullable failedRequestMap) {
         NSLog(@"[Codec][Codec-End] successMap = %@", successRequestMap);
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!strongSelf) { return; }
+
         if (!success) {
-            [self sendSafeCodecRequest];
+            [strongSelf sendSafeCodecRequest];
             return;
         }
         
@@ -130,7 +138,7 @@
             }
         }
         
-        [self mergeMediaResourcesWithSrcURLs:srcURLs];
+        [strongSelf mergeMediaResourcesWithSrcURLs:srcURLs];
     }];
 }
 
@@ -177,14 +185,19 @@
 }
 
 - (void)sendSafeCodecRequest {
+    __weak typeof(self) weakSelf = self;
+
     self.safeRequest = [[PDMediaCodecRequest requestWithBuilder:^(id<PDMediaCodecRequestBuilder>  _Nonnull builder) {
         builder.audioCodecAttr = self.audioCodecAttr;
         builder.videoCodecAttr = self.videoCodecAttr;
         builder.srcURL = self.srcURL;
         builder.dstURL = self.dstURL;
     }] sendWithDoneHandler:^(BOOL success, NSError * _Nullable error) {
-        [self notifyWithResult:success error:error];
-        [self deleteIntermediateFilesIfNeeded];
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!strongSelf) { return; }
+        
+        [strongSelf notifyWithResult:success error:error];
+        [strongSelf deleteIntermediateFilesIfNeeded];
     }];
 }
 
