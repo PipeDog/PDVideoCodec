@@ -71,6 +71,8 @@
     _batchRequest = nil;
     [_safeRequest cancel];
     _safeRequest = nil;
+    
+    [[PDMediaCodecSliceRequestManager defaultManager] addRequest:self];
 }
 
 #pragma mark - Private Methods
